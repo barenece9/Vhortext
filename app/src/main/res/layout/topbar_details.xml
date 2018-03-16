@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/topbar_group_name_edit"
+    android:layout_width="wrap_content"
+    android:layout_height="80dp"
+    android:background="@color/transluscent_app_Brown"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <LinearLayout
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:orientation="vertical"
+        android:layout_toLeftOf="@+id/group_details_rl_delete"
+        android:visibility="visible">
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            wachat:customFont="@string/font_bold" />
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/tv_createdBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_small"
+            wachat:customFont="@string/font" />
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/tv_dateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_small"
+            wachat:customFont="@string/font" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/group_details_rl_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/group_details_rl_edit"
+        android:padding="12dp">
+        <ImageView
+            android:id="@+id/group_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_chats_delete_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/group_details_rl_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_group_detail_screen_edit_icon" />
+    </RelativeLayout>
+</RelativeLayout>

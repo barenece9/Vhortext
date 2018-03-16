@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/ic_share_image_screen_background">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/toolbar_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <!--bottom section-->
+    <LinearLayout
+        android:id="@+id/lnr_Bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/botttom_button_section"
+        android:orientation="horizontal"
+        android:padding="@dimen/p_btn">
+
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/tvCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/app_Brown"
+            android:gravity="center"
+            android:padding="@dimen/p_btn"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/view_yellow_color"
+            android:textSize="@dimen/text_size_large"
+            wachat:customFont="@string/font" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="0.1" />
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/tvSend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/btn_deselect_solor"
+            android:gravity="center"
+            android:padding="@dimen/p_btn"
+            android:text="@string/send"
+            android:textAllCaps="false"
+            android:textColor="@color/view_yellow_color"
+            android:textSize="@dimen/text_size_large"
+            wachat:customFont="@string/font" />
+
+    </LinearLayout>
+    <!--dynamic image view add section-->
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/lnr_Bottom"
+        android:layout_marginTop="5dp"
+        android:background="@color/botttom_button_section">
+
+        <include
+            android:id="@+id/sec"
+            layout="@layout/include_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText
+        android:id="@+id/et_caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/rel"
+        android:background="@color/share_img_add_cation_bg"
+        android:hint="@string/ad_caption"
+        android:padding="@dimen/p_btn"
+        android:textColor="@color/app_Brown"
+        android:textColorHint="@color/app_Brown"
+        android:textSize="@dimen/text_size_xlarge"
+        wachat:customFont="@string/font"
+        android:maxLength="100"
+       android:singleLine="true"
+        android:imeOptions="actionDone"/>
+
+    <!--top section-->
+    <RelativeLayout
+        android:id="@+id/rel_top"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_above="@id/et_caption"
+        android:layout_below="@+id/appBar"
+        android:padding="@dimen/p_top_rel">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/view_yellow_color">
+
+        </android.support.v4.view.ViewPager>
+
+        <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_centerInParent="true" />-->
+
+
+    </RelativeLayout>
+</RelativeLayout>

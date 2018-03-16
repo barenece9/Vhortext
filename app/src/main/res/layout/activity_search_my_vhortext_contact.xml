@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/appBar"
+            layout="@layout/toolbar_custom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_Brown"
+            android:padding="10dp">
+
+            <include
+                android:id="@+id/rel_search"
+                layout="@layout/include_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <GridView
+            android:id="@+id/gv_choose_people"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:horizontalSpacing="4dp"
+            android:numColumns="@integer/grid_rows"
+            android:verticalSpacing="4dp" />
+
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/chat_text_color"
+        android:text="No Search Result Found"
+        android:textSize="@dimen/text_size_large"
+        android:textStyle="bold"
+        android:visibility="gone" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ProgressBarCircularIndeterminate
+            android:id="@+id/progressBarCircularIndetermininate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/app_Brown"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>
+

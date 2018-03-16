@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#5D4B35">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/toolbar_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/p_grp_lr"
+        android:paddingRight="@dimen/p_grp_lr"
+        android:paddingBottom="@dimen/p_grp_lr"
+        android:paddingTop="@dimen/p_grp_t"
+        android:gravity="center">
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/m_grp_lt"
+            android:layout_marginTop="@dimen/m_grp_lt"
+            android:text="@string/provide_grp_sub_icon_new"
+            android:layout_marginBottom="@dimen/m_custom_rel_t"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_large"
+            wachat:customFont="@string/font" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatRoundedImageView
+                android:id="@+id/iv_Group"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_new_group_icon" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="60dp"
+                android:src="@drawable/ic_edit_profile_take_photo_camera_icon"/>
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="#40000000">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.components.ChatCustomRelativeWithEmoji
+                android:id="@+id/rel_custom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:layout_marginTop="@dimen/m_custom_rel_t">
+
+            </apps.lnsel.com.vhortexttest.helpers.CustomViews.components.ChatCustomRelativeWithEmoji>
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_marginTop="@dimen/m_custom_rel_t">-->
+
+            <!--<ImageView-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:src="@drawable/ic_create_white_24dp" />-->
+
+            <!--</LinearLayout>-->
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="10"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:layout_marginTop="10dp"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/iv_smiley_group_prefix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_chat_share_chat_smiley_icon"
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:id="@+id/rel_group_prefix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/iv_smiley_group_prefix">
+
+                    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText
+                        android:id="@+id/et_name_group_prefix"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="Type group ID prefix here.."
+                        android:textColorHint="@android:color/white"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textColor="@android:color/white"
+                        android:singleLine="true"
+                        android:maxLength="3"
+                        android:inputType="textCapCharacters"
+                        android:textCursorDrawable="@drawable/edittext_cursor"/>
+
+                    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                        android:id="@+id/tv_count_group_prefix"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_toLeftOf="@+id/et_name_group_prefix"
+                        android:text="3"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_size_medium"
+                        wachat:customFont="@string/font" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/et_name_group_prefix"
+                        android:background="@color/view_yellow_color"
+                        android:layout_marginTop="5dp"/>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_marginTop="@dimen/m_custom_rel_t">-->
+
+            <!--<ImageView-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:src="@drawable/ic_create_white_24dp" />-->
+
+            <!--</LinearLayout>-->
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/activity_create_new_group_tv_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NEXT"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/view_yellow_color"
+                android:textSize="18dp"
+                android:background="#1a0d00"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <!---->
+
+    <RelativeLayout
+        android:id="@+id/create_group_touch_layer_for_emoji_hide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    <RelativeLayout
+        android:id="@+id/emojicons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

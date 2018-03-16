@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_sketch_slider_bar"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:visibility="gone"
+    android:padding="10dp">
+
+
+    <ImageView
+        android:id="@+id/red_brush"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_sketch_red_brush_icon" />
+
+    <ImageView
+        android:id="@+id/yellow_brush"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_sketch_yellow_brush_icon" />
+
+    <ImageView
+        android:id="@+id/blue_brush"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_sketch_red_blue_brush_icon" />
+
+    <ImageView
+        android:id="@+id/orange_brush"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_sketch_orange_brush_icon" />
+
+    <ImageView
+        android:id="@+id/purple_brush"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_sketch_red_purple_brush_icon" />
+
+    <ImageView
+        android:id="@+id/blue_light_brush"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_sketch_red_light_blue_brush_icon" />
+
+
+    <ImageView
+        android:id="@+id/black_brush"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/ic_sketch_black_brush_icon" />
+</LinearLayout>
+

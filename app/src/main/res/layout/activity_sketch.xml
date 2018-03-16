@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#1c0100"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/toolbar_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+
+
+        <include
+            android:id="@+id/appBar"
+            layout="@layout/custom_photo_annotate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            android:background="@android:color/white"/>
+
+        <LinearLayout
+            android:id="@+id/ll_include"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-140dp"
+            android:layout_gravity="center_vertical">
+            <include
+                android:id="@+id/side_panel"
+                layout="@layout/sketch_sliding_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_slider"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="6dp"
+            android:layout_marginLeft="-3dp"
+            android:layout_gravity="center_vertical"
+            android:elevation="5dp"
+            android:background="@drawable/selectable_menu_button_bg"
+            android:src="@drawable/ic_sketch_menu_icon_24dp"/>
+
+
+
+        <include
+            android:id="@+id/lnr_option_pen"
+            layout="@layout/side_panel_handle_pen_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/lnr_option_brush"
+            layout="@layout/side_panel_handle_brush_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/lnr_option_size"
+            layout="@layout/side_panel_handle_size_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

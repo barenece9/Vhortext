@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/youtube_video_play_rl_topbar"
+        android:layout_width="match_parent"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/app_Brown">
+
+        <RelativeLayout
+            android:id="@+id/youtube_video_play_rl_topbar_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:layout_alignParentStart="true"
+            android:padding="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chat_share_header_back_icon" />
+        </RelativeLayout>
+
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/youtube_video_play_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_toRightOf="@+id/youtube_video_play_rl_topbar_back"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:layout_centerVertical="true"
+            android:text="YouTube Video"
+            android:textColor="@color/view_yellow_color"
+            android:textSize="@dimen/text_size_medium"
+            wachat:customFont="@string/font_bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/youtube_video_play_rl_topbar"
+        android:background="@android:color/black">
+
+        <com.google.android.youtube.player.YouTubePlayerView
+            android:id="@+id/youtube_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="12dip" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

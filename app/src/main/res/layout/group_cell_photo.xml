@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cellPhoto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/tv_group_sender_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="left"
+        android:layout_marginBottom="5dp"
+        android:textSize="@dimen/text_size_small"
+        android:textColorLink="@android:color/black"
+        wachat:customFont="@string/font_bold" />
+
+    <!--added-->
+    <ImageView
+        android:id="@+id/img_translate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_Msg"
+        android:layout_marginRight="@dimen/m_status_t"
+        android:layout_toLeftOf="@+id/ll_date_and_status"
+        android:contentDescription="@null"
+
+        android:visibility="gone" />
+    <!-- android:src="@drawable/ic_chat_bubble_globe_icon"-->
+    <!--added-->
+
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/tv_Msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="all"
+        android:layout_above="@+id/ll_date_and_status"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:visibility="gone"
+        android:textSize="@dimen/text_size_medium"
+        android:gravity="left"
+        wachat:customFont="@string/font" />
+
+    <ImageView
+        android:id="@+id/cell_photo_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_group_sender_name"
+        android:layout_above="@+id/tv_Msg"
+        android:scaleType="centerCrop" />
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.BlurringView
+        android:id="@+id/blurring_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_group_sender_name"
+        android:layout_above="@+id/tv_Msg"
+        app:blurRadius="11"
+        app:downsampleFactor="6"
+        app:overlayColor="#88FFFFFF"/>
+
+
+    <RelativeLayout
+        android:id="@+id/trnsparent_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_group_sender_name"
+        android:background="@color/mask_color" />
+
+    <RelativeLayout
+        android:id="@+id/rl_file_not_available"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_group_sender_name"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_no_image"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/no_file"
+            android:backgroundTint="@color/app_Brown_StatusBar"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/img_no_image"
+            android:textSize="18sp"
+            android:textColor="@color/app_Brown_StatusBar"
+            android:text="Sorry, file not exist"/>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/cell_video_test"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_chats_video_play_icon"
+        android:clickable="false"
+        android:alpha="0.02"/>
+
+    <ImageView
+        android:id="@+id/cell_photo_mask"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        android:src="@drawable/mask_selector" />
+    <ImageView
+        android:id="@+id/cell_photo_cross"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_chat_share_download_error_icon" />
+
+    <ImageView
+        android:id="@+id/cell_photo_download"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_chat_share_download_icon" />
+
+    <ImageView
+        android:id="@+id/cell_photo_retry"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_chat_share_retry_icon_with_box" />
+
+
+
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ProgressWheel
+        android:id="@+id/cell_photo_progress_wheel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        wheel:matProg_barColor="#a708ff"
+        wheel:matProg_fillRadius="false"
+        wheel:matProg_progressIndeterminate="true" />
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_date_and_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal">
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/cell_photo_tv_Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_margin="5dp"
+            android:textSize="@dimen/text_size_extra_small"
+            wachat:customFont="@string/font" />
+
+
+        <ImageView
+            android:id="@+id/img_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="-3.5dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:contentDescription="@null"
+            android:visibility="visible" />
+
+        <!--  android:layout_alignParentRight="true"-->
+
+    </LinearLayout>
+
+
+</RelativeLayout>

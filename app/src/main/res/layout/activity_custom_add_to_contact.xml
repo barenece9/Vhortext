@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_chat_background">
+
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/toolbar_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBar"
+        android:background="@drawable/ic_chat_background"
+        android:gravity="center">
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_chats_noimage_profile"
+                android:layout_margin="5dp"/>
+
+
+            <EditText
+                android:id="@+id/etn_name"
+                android:layout_width="240dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/square_box_gray_bg"
+                android:cursorVisible="true"
+                android:drawableLeft="@drawable/ic_person_black_24dp"
+                android:drawablePadding="3dp"
+
+                android:layout_gravity="center_horizontal"
+                android:hint="enter name"
+                android:maxLength="40"
+                android:padding="10dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="#cccccc"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/text_size_large" />
+
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="240dp"
+                android:layout_height="45dp"
+                android:padding="10dp"
+                android:text="9876543210"
+                android:background="@drawable/square_box_gray_bg"
+                android:textColor="@color/header_text_color"
+                android:textSize="@dimen/text_size_large"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:drawablePadding="3dp"
+                android:layout_gravity="center_horizontal"
+                android:drawableLeft="@drawable/ic_local_phone_black_24dp"/>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lnr_Bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/p_btn">
+
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/tv_add_to_contact"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/ic_edit_profile_cancel_button"
+            android:gravity="center"
+            android:padding="@dimen/p_btn"
+            android:text="@string/addToContact"
+            android:textAllCaps="false"
+            android:textColor="@color/view_yellow_color"
+            android:textSize="@dimen/text_size_large"
+            wachat:customFont="@string/font" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+

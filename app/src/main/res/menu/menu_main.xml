@@ -1,0 +1,57 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+    <item
+        android:id="@+id/item_right_refresh"
+        android:icon="@drawable/ic_refresh_icon"
+        android:title=""
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/ic_chats_header_search_icon"
+        android:title=""
+        android:visible="true"
+        app:showAsAction="always" />
+    <!-- app:actionViewClass="android.support.v7.widget.SearchView"-->
+
+    <!--app:showAsAction="ifRoom|collapseActionView"-->
+
+    <item
+        android:id="@+id/item_globe"
+        android:icon="@drawable/ic_chats_header_earth_icon_white"
+        android:title=""
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/item_right"
+        android:icon="@drawable/ic_chats_header_earth_icon_white"
+        android:title=""
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/item_right_image"
+        android:icon="@drawable/ic_chats_noimage_profile"
+        android:title=""
+        android:visible="false"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/item_right_first_time_option"
+        android:actionLayout="@layout/include_activity_chat_dropdown"
+        android:icon="@drawable/ic_new_chat_screen_group_icon"
+        android:title=""
+        android:visible="false"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/item_right_create_group"
+        android:icon="@drawable/ic_group_chat_create_group_icon"
+        android:title=""
+        android:visible="false"
+        app:showAsAction="always"/>
+</menu>

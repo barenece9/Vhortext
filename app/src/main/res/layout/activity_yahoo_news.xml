@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto">
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/toolbar_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+    <include
+        layout="@layout/include_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_pagination_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/transluscent_black"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:visibility="gone">
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ProgressBarCircularIndeterminate
+            android:id="@+id/pagination_progress"
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+
+            android:background="@color/app_Brown"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBar">
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ProgressBarCircularIndeterminate
+            android:id="@+id/progressBarCircularIndetermininate"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+
+            android:background="@color/app_Brown"
+            android:visibility="visible" />
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/tv_loading_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progressBarCircularIndetermininate"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/reg_text_color"
+            android:textSize="@dimen/text_size_medium"
+            wachat:customFont="@string/font" />
+    </RelativeLayout>
+</RelativeLayout>

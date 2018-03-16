@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/toolbar_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <ListView
+        android:id="@+id/activity_view_block_user_lv"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/appBar"
+        android:divider="@null"
+        android:layout_height="match_parent" />
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/activity_view_block_user_empty"
+        wachat:customFont="@string/font"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/m_common"
+        android:padding="7dp"
+        android:textStyle="bold"
+        android:text="@string/no_data"
+        android:textColor="@color/chat_text_color"
+        android:textSize="@dimen/text_size_xlarge"
+        android:visibility="gone"/>
+
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ProgressBarCircularIndeterminate
+        android:id="@+id/activity_view_block_user_progressBarCircularIndetermininate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/app_Brown"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

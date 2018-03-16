@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cell_sticker"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/tv_group_sender_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="left"
+        android:layout_marginBottom="5dp"
+        android:textSize="@dimen/text_size_extra_small"
+        android:textColorLink="@android:color/black"
+        wachat:customFont="@string/font_bold" />
+
+    <!--added-->
+    <ImageView
+        android:id="@+id/img_translate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_Msg"
+        android:layout_marginRight="@dimen/m_status_t"
+        android:layout_toLeftOf="@+id/cell_photo_tv_Date"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_chat_bubble_globe_icon"
+        android:visibility="gone" />
+    <!--added-->
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/cell_sticker_tv_Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_Msg"
+        android:layout_alignParentRight="true"
+        android:textColor="@android:color/white"
+        android:layout_margin="5dp"
+        android:textSize="@dimen/text_size_small"
+        wachat:customFont="@string/font" />
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/tv_Msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="all"
+        android:layout_below="@+id/cell_sticker_iv"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:visibility="gone"
+        android:textSize="@dimen/text_size_large"
+        wachat:customFont="@string/font" />
+
+    <ImageView
+        android:id="@+id/cell_sticker_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_group_sender_name"
+        android:scaleType="fitCenter" />
+
+
+
+</RelativeLayout>

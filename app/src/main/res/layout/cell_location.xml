@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cellLocation"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/tv_group_sender_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="left"
+        android:layout_marginBottom="5dp"
+        android:textSize="@dimen/text_size_small"
+        android:textColorLink="@android:color/black"
+        wachat:customFont="@string/font_bold" />
+
+    <RelativeLayout
+        android:id="@+id/add_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_group_sender_name"
+        android:background="@android:color/white"
+        android:padding="@dimen/p_left">
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/tv_loc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_medium"
+            android:textColor="@android:color/black"
+            wachat:customFont="@string/font" />
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/tv_Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/tv_loc"
+            android:layout_alignRight="@id/tv_loc"
+            android:layout_below="@+id/tv_loc"
+            android:gravity="right"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_extra_small" />
+
+        <ImageView
+            android:id="@+id/img_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="-3.5dp"
+            android:layout_toRightOf="@+id/tv_Date"
+            android:contentDescription="@null"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/loc_view_location_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/add_wrapper"
+        android:layout_alignRight="@+id/add_wrapper"
+        android:layout_below="@+id/add_wrapper"
+        android:gravity="center"
+        android:padding="@dimen/p_left"
+        android:text="@string/view_location"
+        android:textSize="@dimen/text_size_large" />
+
+
+</RelativeLayout>

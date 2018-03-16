@@ -1,0 +1,113 @@
+<resources>
+
+    <style name="Vhortex.Theme" parent="AppTheme.Base">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+        -->
+        <item name="actionButtonStyle">@style/ActionButtonStyle</item>
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+    <style name="WhiteAccent" parent="@android:style/Widget.ProgressBar.Inverse">
+        <item name="colorAccent">@color/view_yellow_color</item> <!-- Whatever color you want-->
+    </style>
+    <!--this will reduce space between actionBar Icons-->
+    <style name="ActionButtonStyle" parent="Widget.AppCompat.ActionButton">
+        <item name="android:minWidth">0dip</item>
+        <item name="android:maxWidth">50dip</item>
+        <item name="android:paddingLeft">0dip</item>
+        <item name="android:paddingRight">0dip</item>
+    </style>
+
+    <style name="Vhortex.Theme.Sketch" parent="Vhortex.Theme">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+        -->
+        <item name="android:windowBackground">@android:color/white</item>
+    </style>
+    <!-- Base application theme. -->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/app_Brown</item>
+        <item name="colorPrimaryDark">@color/app_Brown</item>
+        <item name="colorAccent">@android:color/white</item>
+    </style>
+
+    <style name="Vhortex.AppBar" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@color/app_Brown_StatusBar</item>
+        <item name="android:textColorSecondary">@color/app_Brown_StatusBar</item>
+        <item name="searchViewStyle">@style/AppTheme.SearchView</item>
+    </style>
+
+    <style name="MyTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/app_Brown_StatusBar</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ToolbarTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
+        <item name="subtitleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
+        <item name="android:subtitleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
+        <item name="android:titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
+
+    </style>
+
+    <style name="AppTheme.SearchView" parent="Widget.AppCompat.SearchView">
+        <item name="searchIcon">@drawable/ic_chats_header_search_icon</item>
+        <item name="closeIcon">@drawable/ic_new_chat_screen_close_icon</item>
+        <item name="goIcon">@drawable/ic_chat_share_header_back_icon</item>
+
+    </style>
+
+    <declare-styleable name="ViewStyle">
+        <attr name="customFont" format="string" />
+        <attr name="borderColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+
+    <style name="Widget" />
+
+    <style name="Widget.ProgressBar.CircularProgressBar" parent="Widget">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="cpb_progressColor">@color/circular_progress_default_progress</item>
+        <item name="cpb_hasShadow">true</item>
+        <item name="cpb_strokeWidth">20</item>
+        <item name="cpb_titleColor">@color/circular_progress_default_title</item>
+        <item name="cpb_subtitleColor">@color/circular_progress_default_subtitle</item>
+    </style>
+
+    <style name="Widget.ProgressBar.Holo.CircularProgressBar" parent="Widget.ProgressBar.CircularProgressBar">
+        <item name="cpb_hasShadow">false</item>
+        <item name="cpb_strokeWidth">5</item>
+    </style>
+
+    <style name="Vhortex.Theme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Vhortex.Theme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/app_Brown</item>
+        <item name="colorPrimaryDark">@color/app_Brown</item>
+        <item name="colorAccent">@android:color/white</item>
+    </style>
+    <style name="EditText">
+        <item name="android:singleLine">true</item>
+        <item name="colorControlNormal">#FFFFFF</item>
+        <item name="colorControlActivated">#FFFFFF</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+</resources>

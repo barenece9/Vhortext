@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rel_top"
+        android:background="@drawable/list_item_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatRoundedView
+            android:id="@+id/inflater_fragment_contacts_items_iv_ProfileImage"
+            android:layout_width="@dimen/param"
+            android:layout_height="@dimen/param"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="@dimen/p_chat_top_rel_tb"
+            android:layout_marginLeft="@dimen/p_chat_top_rel_lr"
+            android:layout_marginRight="@dimen/p_chat_top_rel_lr"
+            android:layout_marginTop="@dimen/p_chat_top_rel_tb"
+            android:background="@android:color/transparent"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_chats_noimage_profile"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/inflater_fragment_contacts_items_iv_online_status"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_toRightOf="@+id/inflater_fragment_contacts_items_iv_ProfileImage"
+            android:layout_alignBottom="@+id/inflater_fragment_contacts_items_iv_ProfileImage"
+            android:layout_marginLeft="-35dp"
+            android:layout_marginBottom="2dp"
+            android:elevation="2dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/badge_circle"/>
+
+        <LinearLayout
+            android:id="@+id/lnr_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/p_chat_top_rel_tb"
+            android:layout_marginTop="@dimen/p_chat_top_rel_tb"
+            android:layout_toLeftOf="@+id/rl_block_n_favorite"
+            android:layout_toRightOf="@+id/inflater_fragment_contacts_items_iv_ProfileImage"
+            android:orientation="vertical">
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                android:id="@+id/inflater_fragment_contacts_items_tv_ProfileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:singleLine="true"
+                android:textColor="@color/chat_text_color"
+                android:textSize="@dimen/text_size_medium"
+                android:textStyle="bold"
+                wachat:customFont="@string/font" />
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                android:id="@+id/inflater_fragment_contacts_items_tv_ProfileStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_status_t"
+                android:ellipsize="marquee"
+                android:gravity="left"
+                android:singleLine="true"
+                android:textColor="@color/chat_text_color"
+                android:textSize="@dimen/text_size_medium"
+                wachat:customFont="@string/font" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/rl_block_n_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:paddingBottom="@dimen/view_small_margin"
+            android:paddingEnd="@dimen/view_small_margin"
+            android:paddingLeft="@dimen/view_small_margin"
+            android:paddingRight="@dimen/view_small_margin"
+            android:paddingStart="@dimen/view_small_margin">
+
+            <RelativeLayout
+                android:id="@+id/rl_block"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/inflater_fragment_contacts_items_iv_block"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/p_chat_top_rel_tb"
+                    android:contentDescription="@null"
+                    android:src="@drawable/selector_block_unblock"
+                    tools:ignore="ContentDescription" />
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ProgressBarCircularIndeterminate
+                    android:id="@+id/inflater_fragment_contacts_items_progressBar_iv_block"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/inflater_fragment_contacts_items_iv_block"
+                    android:background="@color/app_Brown"
+                    android:visibility="gone"
+                    wachat:cpb_strokeWidth="2" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_Favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/inflater_fragment_contacts_items_iv_Favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/p_chat_top_rel_tb"
+                    android:contentDescription="@null"
+                    android:src="@drawable/selector_contact_favourite"
+                    tools:ignore="ContentDescription" />
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ProgressBarCircularIndeterminate
+                    android:id="@+id/inflater_fragment_contacts_items_progressBar_iv_Favorite"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/inflater_fragment_contacts_items_iv_Favorite"
+                    android:visibility="gone"
+                    wachat:cpb_strokeWidth="2" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <!--<RelativeLayout
+            android:id="@+id/rl_block"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/rl_Favorite"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center"
+            android:paddingBottom="@dimen/view_small_margin"
+            android:paddingEnd="@dimen/view_small_margin"
+            android:paddingLeft="@dimen/view_small_margin"
+            android:paddingRight="@dimen/view_small_margin"
+            android:paddingStart="@dimen/view_small_margin">
+
+            <ImageView
+                android:id="@+id/inflater_fragment_contacts_items_iv_block"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/p_chat_top_rel_tb"
+                android:contentDescription="@null"
+                android:src="@drawable/selector_block_unblock"
+                tools:ignore="ContentDescription" />
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ProgressBarCircularIndeterminate
+                android:id="@+id/inflater_fragment_contacts_items_progressBar_iv_block"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/inflater_fragment_contacts_items_iv_block"
+                android:background="@color/app_Brown"
+                android:visibility="gone"
+                wachat:cpb_strokeWidth="2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_Favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center"
+
+            android:paddingBottom="@dimen/view_small_margin"
+            android:paddingEnd="@dimen/view_small_margin"
+            android:paddingLeft="@dimen/view_small_margin"
+            android:paddingRight="@dimen/view_small_margin"
+            android:paddingStart="@dimen/view_small_margin">
+
+            <ImageView
+                android:id="@+id/inflater_fragment_contacts_items_iv_Favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/p_chat_top_rel_tb"
+                android:contentDescription="@null"
+                android:src="@drawable/selector_contact_favourite"
+                tools:ignore="ContentDescription" />
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ProgressBarCircularIndeterminate
+                android:id="@+id/inflater_fragment_contacts_items_progressBar_iv_Favorite"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/inflater_fragment_contacts_items_iv_Favorite"
+                android:visibility="gone"
+                wachat:cpb_strokeWidth="2" />
+        </RelativeLayout>-->
+
+
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/view_gray_color" />
+</LinearLayout>

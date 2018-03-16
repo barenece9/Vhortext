@@ -1,0 +1,9 @@
+<resources>
+    <string name="message.error.generic">Something is not right. Please try again</string>
+    <string name="message.error.no_internet">No internet connection available</string>
+    <string name="message.error.timeout">Connection timed out</string>
+
+
+
+
+</resources>

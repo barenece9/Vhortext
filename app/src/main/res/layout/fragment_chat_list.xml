@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/fragment_custom_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:id="@+id/ll_inviteHeaderBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appBar"
+        android:visibility="visible">
+
+        <include
+            layout="@layout/fragment_custom_invite_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:layout_below="@+id/ll_inviteHeaderBar">
+
+        <com.fortysevendeg.swipelistview.SwipeListView
+            android:id="@+id/swipeList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="#00000000"
+            android:visibility="gone"
+            wachat:swipeActionLeft="reveal"
+            wachat:swipeActionRight="reveal"
+            wachat:swipeAnimationTime="500"
+            wachat:swipeBackView="@+id/back"
+            wachat:swipeCloseAllItemsWhenMoveList="true"
+            wachat:swipeFrontView="@+id/front"
+            wachat:swipeMode="both"
+            wachat:swipeOpenOnLongPress="false" />
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/fragment_chat_tv_empty_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="16dp"
+            android:text="@string/no_conversation_found"
+            android:textColor="@color/chat_text_color"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold"
+            android:visibility="visible"
+            wachat:customFont="@string/font" />
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ProgressBarCircularIndeterminate
+            android:id="@+id/fragment_chat_progressBarCircularIndetermininate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/app_Brown"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

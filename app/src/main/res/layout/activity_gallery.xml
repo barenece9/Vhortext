@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:id="@+id/rel_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_Brown"
+        android:padding="10dp">
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/tv_pic_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_header_back_icon"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:text="skdfg"
+            android:textColor="@color/view_yellow_color"
+            android:textSize="@dimen/text_size_medium"
+            android:visibility="gone"
+            wachat:customFont="@string/font" />
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/tv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Gallery"
+            android:textColor="@color/view_yellow_color"
+            android:textSize="@dimen/text_size_large"
+            wachat:customFont="@string/font" />
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/tv_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Ok"
+            android:textColor="@color/view_yellow_color"
+            android:textSize="@dimen/text_size_large"
+            wachat:customFont="@string/font" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rel_top"
+        android:gravity="center"
+        android:horizontalSpacing="4dp"
+        android:numColumns="@integer/grid_rows"
+        android:verticalSpacing="2dp" />
+
+</RelativeLayout>

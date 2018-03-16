@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="app_Brown">#1c0100</color>
+    <color name="app_Brown_StatusBar">#f0bd79</color>
+
+    <color name="green">#a4c639</color>
+    <color name="transluscent_black">#9A000000</color>
+    <color name="transluscent_app_Brown">#901c0100</color>
+    <color name="transluscent_white">#80FFFFFF</color>
+    <color name="home_top_bar_gray">#939393</color>
+
+    <!-- wachat colors -->
+
+    <color name="reg_bg_bottom">#fcf5eb</color>
+    <color name="reg_text_color">#3d2522</color>
+
+    <!-- inflater chatData -->
+
+    <color name="chat_text_color">#572c01</color>
+    <color name="chat_calender_section_gray">#e2ddda</color>
+
+    <color name="chat_swipe_section_color">#69554a</color>
+
+
+    <!-- inflater contact -->
+    <color name="view_gray_color">#c6bfbf</color>
+
+    <!-- inflater new group -->
+    <color name="view_yellow_color">#f0bd79</color>
+
+    <!-- status-->
+    <color name="header_text_color">#84756c</color>
+
+    <!--ADD MASK-->
+    <color name="botttom_button_section">#f5ede1</color>
+    <color name="btn_deselect_solor">#55453a</color>
+
+    <!--find people-->
+
+    <color name="bg_find_people_section">#ffe7d7</color>
+
+    <!--chatData screen -->
+    <color name="chat_screen_bottom">#5b4e46</color>
+    <color name="textcolor_language">#62534a</color>
+    <color name="share_item_text_color">#806c61</color>
+
+    <!--share image-->
+
+    <color name="share_img_add_cation_bg">#cdc1b9</color>
+
+    <!--  settings-->
+
+    <!-- ChatData -->
+
+    <color name="block_user_popup_top">#a99076</color>
+
+    <!-- sketch-->
+    <!--//pen colors-->
+
+    <color name="contact_header_bg">#9D96AA</color>
+    <color name="sketch_panel_bg">#F2E9D7</color>
+
+
+    <color name="circular_progress_default_progress">#bada55</color>
+    <color name="circular_progress_default_background">#787878</color>
+    <color name="circular_progress_default_title">#bada55</color>
+    <color name="circular_progress_default_subtitle">#D1D1D1</color>
+    <color name="mask_color">#493c36</color>
+    <!--yahoo news-->
+    <color name="yahoo_news_bg">#f0e5cf</color>
+    <color name="yahoo_news_bg_dark">#ffd79f</color>
+    <color name="yahoo_news_heade_txt_color">#140800</color>
+
+    <color name="ed_profile_txt_color">#DCC39C</color>
+
+
+    <color name="online_indicator_color">#ff5c33</color>
+    <color name="offline_indicator_color">#FFFFFF</color>
+
+    <color name="chat_swipe_left_section_color">#e6b800</color>
+    <color name="chat_swipe_right_section_color">#d55d5d</color>
+
+    <color name="transparent_signup">#20ccccb3</color>
+    <color name="sync_continue_bg">#262626</color>
+
+    <color name="invite_header_bg">#404040</color>
+
+
+
+
+
+</resources>

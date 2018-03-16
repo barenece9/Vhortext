@@ -1,0 +1,13 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid
+        android:color="@color/online_indicator_color" />
+    <stroke
+        android:width="2dip"
+        android:color="#661400" />
+    <padding
+        android:left="5dip"
+        android:right="5dip"
+        android:top="5dip"
+        android:bottom="5dip" />
+</shape>

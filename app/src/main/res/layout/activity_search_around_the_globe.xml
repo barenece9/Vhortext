@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/toolbar_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <RelativeLayout
+        android:id="@+id/around_the_globe_search_sections"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/appBar"
+        android:layout_toLeftOf="@+id/iv_toggle"
+        android:layout_height="wrap_content">
+
+       <!-- <fragment
+            android:id="@+id/place_autocomplete_fragment"
+            android:name="com.google.android.gms.location.places.ui.SupportPlaceAutocompleteFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            tools:layout="@layout/place_autocomplete_item_powered_by_google" />-->
+
+        <fragment
+            android:id="@+id/place_autocomplete_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+            android:padding="0dp"
+            tools:layout="@layout/place_autocomplete_item_powered_by_google"
+            android:visibility="visible"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_name_srch_Wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/p_bottom_rel"
+            android:layout_marginRight="@dimen/p_bottom_rel"
+            android:background="@android:color/white"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/include_search_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/m_common"
+                android:src="@drawable/ic_search_around_the_globe_search_icon" />
+
+            <EditText
+                android:id="@+id/include_search_et_search_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/p_bottom_dialog_del"
+                android:layout_toRightOf="@+id/include_search_iv"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/et_search_hint"
+                android:imeOptions="actionSearch"
+                android:padding="@dimen/m_common"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textSize="@dimen/text_size_medium" />
+
+            <ImageView
+                android:id="@+id/include_search_iv_cross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_find_people_close_icon" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/appBar"
+        android:layout_marginBottom="@dimen/m_common"
+        android:layout_marginEnd="@dimen/m_common"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="@dimen/m_common"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="@dimen/m_common"
+        android:src="@drawable/ic_search_around_the_globe_toggle_icon_new"
+        android:visibility="gone" />
+
+
+    <GridView
+        android:id="@+id/gv_choose_people"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/around_the_globe_search_sections"
+        android:gravity="center"
+        android:horizontalSpacing="4dp"
+        android:numColumns="@integer/grid_rows"
+        android:verticalSpacing="4dp" />
+
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/no_conversation_found"
+        android:textColor="@color/chat_text_color"
+        android:textSize="@dimen/text_size_large"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/search_option_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/around_the_globe_search_sections"
+        android:background="@android:color/white"
+        android:clickable="true"
+        android:padding="@dimen/m_common"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_select_loc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/p_right"
+            android:src="@drawable/selector_add_select_deselect_tick" />
+
+        <TextView
+            android:id="@+id/tv_srch_loc_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_select_loc"
+            android:layout_alignTop="@+id/iv_select_loc"
+            android:layout_marginLeft="@dimen/m_common"
+            android:layout_toRightOf="@+id/iv_select_loc"
+            android:gravity="center_vertical"
+            android:text="Search by location" />
+
+        <View
+            android:id="@+id/diviter"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignLeft="@+id/tv_srch_loc_option"
+            android:layout_below="@+id/iv_select_loc"
+            android:layout_marginTop="@dimen/m_common"
+            android:background="@color/home_top_bar_gray" />
+
+        <ImageView
+            android:id="@+id/iv_select_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/diviter"
+            android:layout_marginLeft="@dimen/p_right"
+            android:layout_marginTop="@dimen/m_common"
+            android:src="@drawable/selector_add_select_deselect_tick" />
+
+        <TextView
+            android:id="@+id/tv_srch_name_option"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_select_name"
+            android:layout_alignTop="@+id/iv_select_name"
+            android:layout_marginLeft="@dimen/m_common"
+            android:layout_toRightOf="@+id/iv_select_loc"
+            android:gravity="center_vertical"
+            android:text="Search by name or phone number" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ProgressBarCircularIndeterminate
+            android:id="@+id/progressBarCircularIndetermininate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/app_Brown"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>
+

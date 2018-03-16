@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/toolbar_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.DrawingView
+            android:id="@+id/drawing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
+            android:background="@android:color/white" />
+
+        <SlidingDrawer
+            android:id="@+id/drawer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:content="@+id/side_panel"
+            android:gravity="center_horizontal"
+            android:handle="@+id/handle"
+            android:orientation="horizontal"
+            android:rotation="180"
+            android:topOffset="240dp">
+
+            <ImageView
+                android:id="@+id/handle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="350dp"
+                android:rotation="180"
+                android:src="@drawable/ic_sketch_slider_menu" />
+
+
+            <include
+                android:id="@+id/side_panel"
+                layout="@layout/side_panel_sketch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+        </SlidingDrawer>
+
+        <include
+            android:id="@+id/lnr_option_pen"
+            layout="@layout/side_panel_handle_pen_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/lnr_option_brush"
+            layout="@layout/side_panel_handle_brush_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/lnr_option_size"
+            layout="@layout/side_panel_handle_size_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+</LinearLayout>

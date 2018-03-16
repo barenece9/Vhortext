@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/inflater_profile_status_tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/selector_status_text"
+        android:textSize="@dimen/text_size_medium"
+        wachat:customFont="@string/font_bold"
+        android:text="@string/hello_world"
+        android:padding="10dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/view_gray_color" />
+
+</LinearLayout>

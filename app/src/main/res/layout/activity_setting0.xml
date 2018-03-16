@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/toolbar_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/p_common">
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/m_common"
+                    android:drawableLeft="@drawable/ic_location_icon"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/p_tv_l"
+                    android:text="@string/find_me_by_location"
+                    android:textColor="@color/app_Brown"
+                    android:textSize="@dimen/text_size_medium"
+                    wachat:customFont="@string/font" />
+
+
+                <ToggleButton
+                    android:id="@+id/tgbtn_location"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+
+                android:layout_marginLeft="@dimen/m_common"
+                android:layout_marginRight="@dimen/m_common"
+                android:background="@color/view_yellow_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/p_common">
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/m_common"
+                    android:drawableLeft="@drawable/ic_phone_icon"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/p_tv_l"
+                    android:text="@string/find_me_by_ph_no"
+                    android:textColor="@color/app_Brown"
+                    android:textSize="@dimen/text_size_medium"
+                    wachat:customFont="@string/font" />
+
+
+                <ToggleButton
+                    android:id="@+id/tgbtn_phoneNo"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:textOff=""
+                    android:textOn="" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/m_common"
+                android:layout_marginRight="@dimen/m_common"
+                android:background="@color/view_yellow_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/p_common">
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                    android:id="@+id/tv_translate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/m_common"
+                    android:drawableLeft="@drawable/ic_traslation_icon"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/p_tv_l"
+                    android:text="@string/translation_off"
+                    android:textColor="@color/app_Brown"
+                    android:textSize="@dimen/text_size_medium"
+                    wachat:customFont="@string/font" />
+
+                <ToggleButton
+                    android:id="@+id/tgbtn_translation"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:textOff=""
+                    android:textOn="" />
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/m_common"
+                android:layout_marginRight="@dimen/m_common"
+                android:background="@color/view_yellow_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/p_common">
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                    android:id="@+id/tv_toggle_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/m_common"
+                    android:drawableLeft="@drawable/ic_notification_icon"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/p_tv_l"
+                    android:text="Notification"
+                    android:textColor="@color/app_Brown"
+                    android:textSize="@dimen/text_size_medium"
+                    wachat:customFont="@string/font" />
+
+
+                <ToggleButton
+                    android:id="@+id/tgbtn_notification"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/toggle_selector"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn="" />
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/m_common"
+                android:layout_marginRight="@dimen/m_common"
+                android:background="@color/view_yellow_color" />
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/m_common"
+                android:layout_marginRight="@dimen/m_common"
+                android:background="@color/view_yellow_color" />
+
+            <RelativeLayout
+                android:id="@+id/rel_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/p_common">
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/m_common"
+                    android:drawableLeft="@drawable/ic_about_icon"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/p_tv_l"
+                    android:text="@string/about"
+                    android:textColor="@color/app_Brown"
+                    android:textSize="@dimen/text_size_medium"
+                    wachat:customFont="@string/font" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_settings_arrow" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/m_common"
+                android:layout_marginRight="@dimen/m_common"
+                android:background="@color/view_yellow_color" />
+
+            <RelativeLayout
+                android:id="@+id/rel_help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/p_common">
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/m_common"
+                    android:drawableLeft="@drawable/ic_help_icon"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/p_tv_l"
+                    android:text="@string/help"
+                    android:textColor="@color/app_Brown"
+                    android:textSize="@dimen/text_size_medium"
+                    wachat:customFont="@string/font" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_settings_arrow" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/m_common"
+                android:layout_marginRight="@dimen/m_common"
+                android:background="@color/view_yellow_color" />
+
+            <RelativeLayout
+                android:id="@+id/rel_contact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/p_common">
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/m_common"
+                    android:drawableLeft="@drawable/ic_contact_icon"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/p_tv_l"
+                    android:text="@string/contact_us"
+                    android:textColor="@color/app_Brown"
+                    android:textSize="@dimen/text_size_medium"
+                    wachat:customFont="@string/font" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_settings_arrow" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/m_common"
+                android:layout_marginRight="@dimen/m_common"
+                android:background="@color/view_yellow_color" />
+
+            <RelativeLayout
+                android:id="@+id/rel_copyright"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/p_common">
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/m_common"
+                    android:drawableLeft="@drawable/ic_copyright_icon"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/p_tv_l"
+                    android:text="@string/copyright_info"
+                    android:textColor="@color/app_Brown"
+                    android:textSize="@dimen/text_size_medium"
+                    wachat:customFont="@string/font" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_settings_arrow" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

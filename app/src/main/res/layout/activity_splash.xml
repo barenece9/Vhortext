@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.SplashScreen.SplashActivity"
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="-5dp"
+        android:layout_marginTop="-5dp"
+        android:layout_marginLeft="-5dp"
+        android:layout_marginRight="-5dp"
+        android:background="@drawable/ic_registration_bg_new"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:id="@+id/ll_splash_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/vt_splash_logo"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:adjustViewBounds="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/logowithtext"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

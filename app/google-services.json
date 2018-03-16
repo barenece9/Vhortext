@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "891610954664",
+    "firebase_url": "https://android-push-e09d4.firebaseio.com",
+    "project_id": "android-push-e09d4",
+    "storage_bucket": "android-push-e09d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:891610954664:android:902872348ae11c75",
+        "android_client_info": {
+          "package_name": "com.lnsel.ambujaneotiasales"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "891610954664-mu1mv436o0ih03g61csr2pj8kcheeo3k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzfmP1jB1cenEQpg0HoBbCDXC0uaR4K1U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:891610954664:android:2087b027a528bb23",
+        "android_client_info": {
+          "package_name": "apps.lnsel.com.vhortexttest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "891610954664-mu1mv436o0ih03g61csr2pj8kcheeo3k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzfmP1jB1cenEQpg0HoBbCDXC0uaR4K1U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

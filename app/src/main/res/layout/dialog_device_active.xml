@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/reg_bg_bottom"
+    android:paddingBottom="@dimen/p_bottom_dialog_del"
+    android:layout_marginLeft="@dimen/m_dialog_lr"
+    android:layout_marginRight="@dimen/m_dialog_lr">
+
+    <TextView
+        android:id="@+id/dialog_device_active_confirmation_tv_common_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/p_dialog_del_t"
+        android:padding="5dp"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_xlarge"
+        android:textStyle="bold"
+        android:text="@string/device_activation_text"
+        android:gravity="center"/>
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/dialog_device_active_confirmation_tv_common_body"
+        android:layout_below="@id/dialog_device_active_confirmation_tv_common_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/p_dialog_del_t"
+        android:padding="5dp"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_medium"
+        wachat:customFont="@string/font_bold"
+        android:text="@string/verification_text"
+        android:gravity="center"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_otp_enter"
+        android:layout_below="@id/dialog_device_active_confirmation_tv_common_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText
+                android:id="@+id/activity_authentication_et1"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:paddingBottom="@dimen/p_chat_top_rel_tb"
+                android:background="@drawable/authen_edit_back"
+                android:textCursorDrawable="@null"
+                wachat:customFont="@string/font" />
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText
+                android:id="@+id/activity_authentication_et2"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:paddingBottom="@dimen/p_chat_top_rel_tb"
+                android:background="@drawable/authen_edit_back"
+                android:textCursorDrawable="@null"
+                wachat:customFont="@string/font" />
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText
+                android:id="@+id/activity_authentication_et3"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:paddingBottom="@dimen/p_chat_top_rel_tb"
+                android:background="@drawable/authen_edit_back"
+                android:textCursorDrawable="@null"
+                android:singleLine="true"
+
+
+
+                wachat:customFont="@string/font" />
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText
+                android:id="@+id/activity_authentication_et4"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:paddingBottom="@dimen/p_chat_top_rel_tb"
+                android:background="@drawable/authen_edit_back"
+                android:textCursorDrawable="@null"
+                wachat:customFont="@string/font" />
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText
+                android:id="@+id/activity_authentication_et5"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:paddingBottom="@dimen/p_chat_top_rel_tb"
+                android:background="@drawable/authen_edit_back"
+                android:textCursorDrawable="@null"
+                wachat:customFont="@string/font" />
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText
+                android:id="@+id/activity_authentication_et6"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:paddingBottom="@dimen/p_chat_top_rel_tb"
+                android:background="@drawable/authen_edit_back"
+                android:textCursorDrawable="@null"
+                wachat:customFont="@string/font" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/dialog_device_active_confirmation_resendOTP_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/rl_otp_enter"
+        android:layout_margin="5dp"
+        android:background="@color/view_gray_color" />
+
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/activity_authentication_tv_resendOTP"
+        android:layout_below="@id/dialog_device_active_confirmation_resendOTP_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:text="@string/send_code"
+        android:textColor="@color/app_Brown"
+        android:textSize="@dimen/text_size_medium"
+        wachat:customFont="@string/font" />
+
+
+    <View
+        android:id="@+id/dialog_device_active_confirmation_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/activity_authentication_tv_resendOTP"
+        android:layout_margin="5dp"
+        android:visibility="visible"
+        android:background="@color/view_gray_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_device_active_confirmation_view"
+        android:background="@color/view_gray_color">
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/dialog_device_active_confirmation_tv_dialog_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0.10dp"
+            android:layout_weight="1"
+            android:background="@color/reg_bg_bottom"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/cancel"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_large"
+            wachat:customFont="@string/font" />
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/dialog_device_active_confirmation_tv_dialog_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.10dp"
+            android:layout_weight="1"
+            android:background="@color/reg_bg_bottom"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/confirm"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_large"
+            wachat:customFont="@string/font" />
+    </LinearLayout>
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ProgressBarCircularIndeterminate
+        android:id="@+id/dialog_progressBarCircular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:background="@color/app_Brown" />
+
+</RelativeLayout>
+

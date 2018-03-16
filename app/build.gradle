@@ -1,0 +1,88 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
+
+    defaultConfig {
+        applicationId "apps.lnsel.com.vhortexttest"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+        dexOptions {
+            javaMaxHeapSize "4g"
+        }
+
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+}
+
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.volley:volley:1.0.0'
+    compile 'io.socket:socket.io-client:0.8.3'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.android.support:exifinterface:25.1.0'
+    compile project(':library')
+    compile project(':swipelistview-gradle-port')
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile files('libs/commons-lang3-3.4.jar')
+    compile('com.google.http-client:google-http-client-gson:1.20.0') {
+        exclude module: 'httpclient'
+    }
+    compile files('libs/httpclient-4.3.6.jar')
+    compile files('libs/httpcore-4.3.3.jar')
+    compile files('libs/httpmime-4.3.6.jar')
+    compile 'com.mani:ThinDownloadManager:1.2.0'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.google.android.gms:play-services-appindexing:9.0.2'
+    compile 'com.afollestad:easyvideoplayer:0.3.0'
+    compile 'com.google.firebase:firebase-messaging:9.0.2'
+    compile 'me.leolin:ShortcutBadger:1.1.19@aar'
+    compile 'com.google.apis:google-api-services-translate:v2-rev51-1.23.0'
+    compile('com.google.api-client:google-api-client-android:1.20.0') {
+        exclude module: 'httpclient'
+    }
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.google.android.gms:play-services-maps:9.0.2'
+    compile 'com.google.android.gms:play-services-location:9.0.2'
+    compile files('libs/YouTubeAndroidPlayerApi.jar')
+    //compile  'com.hbb20:ccp:2.1.1'
+    //compile 'com.github.joielechong:countrycodepicker:2.1.5'
+    //compile 'androidmads.updatehandler:updatehandler:1.0.5'
+    //for ccp
+    compile 'com.github.joielechong:countrycodepicker:2.1.5'
+    compile 'net.the4thdimension:audio-wife:1.0.3'
+    compile 'com.github.jeancsanchez:JcPlayer:2.6.10'
+
+}
+apply plugin: 'com.google.gms.google-services'

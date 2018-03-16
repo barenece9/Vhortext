@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/app_Brown">
+
+        <ImageButton
+            android:id="@+id/fragment_custom_header_ivbtn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_chat_share_header_back_icon"
+            android:background="@drawable/selectable_button_bg"
+            android:paddingLeft="8dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/fragment_custom_header_iv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/d_app_logo"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/fragment_custom_header_ivbtn_back"
+            android:layout_toRightOf="@+id/fragment_custom_header_ivbtn_back"
+            android:paddingLeft="15dp"/>
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/fragment_custom_header_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/view_yellow_color"
+            android:textSize="@dimen/text_size_large"
+            wachat:customFont="@string/font_bold"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/fragment_custom_header_iv_logo"
+            android:layout_toRightOf="@+id/fragment_custom_header_iv_logo"
+            android:paddingLeft="5dp"/>
+
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleInverse"
+            android:id="@+id/fragment_custom_header_progressbar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toStartOf="@+id/fragment_custom_header_iv_refresh"
+            android:layout_toLeftOf="@+id/fragment_custom_header_iv_refresh"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/app_Brown"
+            android:visibility="gone" />
+
+
+        <!-- <com.lnsel.mychat.customViews.ProgressBarCircularIndeterminate
+             android:id="@+id/fragment_custom_header_progressBarCircularIndetermininate"
+             android:layout_width="30dp"
+             android:layout_height="30dp"
+             android:layout_toStartOf="@+id/fragment_custom_header_iv_refresh"
+             android:layout_centerInParent="true"
+             android:layout_marginLeft="5dp"
+             android:layout_marginRight="10dp"
+             android:background="@color/app_Brown"
+             android:visibility="visible"  />-->
+
+
+        <ImageButton
+            android:id="@+id/fragment_custom_header_iv_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/fragment_custom_header_iv_search"
+            android:layout_toLeftOf="@+id/fragment_custom_header_iv_search"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_refresh_icon"
+            android:background="@drawable/selectable_button_bg"
+            android:visibility="gone" />
+
+
+        <ImageButton
+            android:id="@+id/fragment_custom_header_iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_chats_header_person_search"
+            android:background="@drawable/selectable_button_bg"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/fragment_custom_header_iv_create_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_group_chat_create_group_icon"
+            android:background="@drawable/selectable_button_bg"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/fragment_custom_header_iv_gallery_gridview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_apps_white_24dp"
+                android:background="@drawable/selectable_button_bg"
+                android:visibility="gone"
+                android:scaleType="fitXY"/>
+
+            <ImageButton
+                android:id="@+id/fragment_custom_header_iv_gallery_action_select_deselect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/select_box_yellow"
+                android:background="@drawable/selectable_button_bg"
+                android:visibility="gone"
+                android:scaleType="fitXY"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:id="@+id/outer_layout"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="-140dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outer_circle"
+
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/inner_circle">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+   <ImageButton
+        android:id="@+id/pen"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="150dp"
+       android:padding="8dp"
+       android:background="@drawable/circular_border_bg_grey"
+        android:src="@drawable/ic_sketch_pencil_icon_24dp"/>
+
+    <ImageButton
+        android:id="@+id/brush"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="190dp"
+        android:padding="8dp"
+        android:scaleType="centerInside"
+        android:background="@drawable/circular_border_bg_grey"
+        android:src="@drawable/ic_sketch_brush_icon_24dp"/>
+
+    <ImageButton
+        android:id="@+id/eraser"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="82dp"
+        android:layout_marginLeft="220dp"
+        android:padding="8dp"
+        android:background="@drawable/circular_border_bg_grey"
+        android:src="@drawable/ic_sketch_eraser_icon_24dp"/>
+
+    <ImageButton
+        android:id="@+id/size"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="126dp"
+        android:layout_marginLeft="235dp"
+        android:background="@drawable/circular_border_bg_grey"
+        android:src="@drawable/ic_sketch_dot_icon_24dp"/>
+
+    <ImageButton
+        android:id="@+id/clear"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginLeft="220dp"
+        android:padding="8dp"
+        android:background="@drawable/circular_border_bg_grey"
+        android:src="@drawable/ic_sketch_delete_icon_24dp"/>
+
+    <ImageButton
+        android:id="@+id/send"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="205dp"
+        android:layout_marginLeft="190dp"
+        android:padding="8dp"
+        android:background="@drawable/circular_border_bg_grey"
+        android:src="@drawable/ic_sketch_send_icon_24dp"/>
+
+    <ImageButton
+        android:id="@+id/text"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="225dp"
+        android:layout_marginLeft="150dp"
+        android:padding="9dp"
+        android:background="@drawable/circular_border_bg_grey"
+        android:src="@drawable/ic_sketch_text_icon_24dp"/>
+
+</RelativeLayout>
+

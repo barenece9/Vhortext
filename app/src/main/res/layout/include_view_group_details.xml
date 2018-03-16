@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="fill_vertical"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <ImageView
+            android:id="@+id/iv_GroupImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="80dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_new_group_icon" />
+
+
+        <include
+            layout="@layout/topbar_details"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <!-- media layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/include_group_details_ll_media"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/square_box_view_group"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/square_box_view_group_header"
+                android:padding="10dp">
+
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/media"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size_xlarge"
+                    wachat:customFont="@string/font" />
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                    android:id="@+id/group_details_media_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size_xlarge"
+                    wachat:customFont="@string/font" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#f9e3c5" />
+
+
+            <HorizontalScrollView
+                android:id="@+id/hsv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:scrollbars="none">
+
+                <include
+                    layout="@layout/horizental_scroll_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </HorizontalScrollView>
+        </LinearLayout>
+
+        <!--total linear-->
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/square_box_view_group"
+            android:orientation="vertical"
+            android:padding="1dp">
+
+            <!--admin layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/square_box_view_group_header"
+                    android:padding="10dp">
+
+
+                    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/admin"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_xlarge"
+                        wachat:customFont="@string/font" />
+
+                    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                        android:id="@+id/admin_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="0"
+                        android:textColor="@color/view_gray_color"
+                        android:textSize="@dimen/text_size_xlarge"
+                        wachat:customFont="@string/font" />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#f9e3c5" />
+
+
+                <!--<include
+                    layout="@layout/include_view_group_details_screen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp" />-->
+                <LinearLayout
+                    android:id="@+id/ll_admin_list_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@drawable/ll_divider_brown"
+                    android:dividerPadding="10dp"
+                    android:orientation="vertical"
+                    android:showDividers="middle" />
+            </LinearLayout>
+            <!--participants-->
+            <LinearLayout
+                android:id="@+id/ll_participantList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/square_box_view_group"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/square_box_view_group_header"
+                    android:padding="10dp">
+
+
+                    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/participants"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_xlarge"
+                        wachat:customFont="@string/font" />
+
+                    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                        android:id="@+id/member_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="0"
+                        android:textColor="@color/view_gray_color"
+                        android:textSize="@dimen/text_size_xlarge"
+                        wachat:customFont="@string/font" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#f9e3c5" />
+
+
+                <ListView
+                    android:id="@+id/lv_participants"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:divider="@android:color/transparent"
+                    android:listSelector="@color/view_gray_color">
+
+                </ListView>
+            </LinearLayout>
+            <!--block participants-->
+            <LinearLayout
+                android:id="@+id/ll_blocked_user_list_section"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:background="@drawable/square_box_view_group"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/square_box_view_group_header"
+                    android:padding="10dp">
+
+
+                    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/blockParticipants"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_xlarge"
+                        wachat:customFont="@string/font" />
+
+                    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                        android:id="@+id/blocked_member_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="0"
+                        android:textColor="@color/view_gray_color"
+                        android:textSize="@dimen/text_size_xlarge"
+                        wachat:customFont="@string/font" />
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#f9e3c5" />
+
+
+                <ListView
+                    android:id="@+id/lv_block_participants"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:divider="@android:color/transparent">
+
+                </ListView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--    button-->
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/group_details_exit_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/app_Brown"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/exitGroup"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_xlarge"
+            wachat:customFont="@string/font" />
+    </LinearLayout>
+</LinearLayout>

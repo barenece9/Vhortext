@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+>
+
+           <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/inflater_select_language_item_tv_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:singleLine="true"
+            android:text="@string/language"
+            android:textColor="@color/chat_text_color"
+            android:textSize="@dimen/text_size_large"
+            wachat:customFont="@string/font"
+            android:padding="15dp"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/p_chat_top_rel_lr"
+        android:layout_marginRight="@dimen/p_chat_top_rel_lr"
+        android:background="@color/view_gray_color" />
+
+</LinearLayout>

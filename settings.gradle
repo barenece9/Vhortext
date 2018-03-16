@@ -1,0 +1,1 @@
+include ':app', ':library', ':swipelistview-gradle-port', ':ccp'

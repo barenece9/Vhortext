@@ -1,0 +1,89 @@
+<resources>
+
+    <!-- wa chatData dimen hdpi -->
+
+    <!--  Brush sizes
+  -->
+    <dimen name="medium_brush">20dp</dimen>
+
+
+    <!-- Rounded Image w/h-->
+    <dimen name="param">45dp</dimen>
+
+    <!-- registration -->
+    <dimen name="m_reg_common_top">10dp</dimen>
+    <dimen name="p_number_box">10dp</dimen>
+    <dimen name="p_number_et_l">10dp</dimen>
+
+    <dimen name="text_size_xlarge">16sp</dimen>
+    <dimen name="text_size_large">15sp</dimen>
+    <dimen name="text_size_medium">14sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_extra_small">10sp</dimen>
+
+    <!--inflater chatData screen-->
+    <dimen name="p_chat_top_rel_tb">5dp</dimen>
+    <dimen name="p_chat_top_rel_lr">10dp</dimen>
+    <dimen name="p_calender_tb">3dp</dimen>
+    <dimen name="p_calender_r">25dp</dimen>
+    <dimen name="p_profile_name_linear">10dp</dimen>
+    <dimen name="m_status_t">3dp</dimen>
+    <dimen name="width_swipe_section">100dp</dimen>
+
+
+    <!-- more screen-->
+    <dimen name="p_iclude_main">12dp</dimen>
+
+    <!--group screen-->
+    <dimen name="p_grp_t">20dp</dimen>
+    <dimen name="p_grp_lr">15dp</dimen>
+    <dimen name="m_grp_lt">10dp</dimen>
+    <dimen name="m_custom_rel_t">20dp</dimen>
+
+    <!--create group-->
+    <dimen name="p_et_l">10dp</dimen>
+
+    <!--dialog more-->
+    <dimen name="p_more_main">10dp</dimen>
+    <dimen name="p_tv">15dp</dimen>
+    <dimen name="h_view">1dp</dimen>
+
+    <!--add mask-->
+    <dimen name="p_btn">10dp</dimen>
+    <dimen name="p_top_rel">20dp</dimen>
+
+
+    <!--find people include-->
+    <dimen name="p_include_lnr_tb">20dp</dimen>
+    <dimen name="p_include_lnr_rl">30dp</dimen>
+
+    <!--chatData screen-->
+    <dimen name="p_bottom_rel">5dp</dimen>
+
+    <!--dialog more/delete-->
+    <dimen name="m_dialog_lr">20dp</dimen>
+    <dimen name="p_bottom_dialog_del">5dp</dimen>
+    <dimen name="p_dialog_del_t">10dp</dimen>
+
+    <!--    settings screen-->
+    <dimen name="p_common">10dp</dimen>
+    <dimen name="m_common">10dp</dimen>
+    <dimen name="p_tv_l">10dp</dimen>
+
+    <!--    chatData dropdown-->
+    <dimen name="p_common_reltv">10dp</dimen>
+
+    <!-- edit profile-->
+    <dimen name="wh_rel_profile">130dp</dimen>
+    <dimen name="wh_iv_profile">100dp</dimen>
+    <dimen name="w_cicle">5dp</dimen>
+    <dimen name="m_et_name_top">18dp</dimen>
+    <dimen name="p_drawable">15dp</dimen>
+
+    <!-- cell chatData padding-->
+
+
+    <!--   edit profile -->
+    <dimen name="p_right">29dp</dimen>
+  <dimen name="p_left">4dp</dimen>
+</resources>

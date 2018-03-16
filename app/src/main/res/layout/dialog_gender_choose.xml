@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/reg_bg_bottom"
+    android:orientation="vertical"
+
+    android:layout_marginRight="@dimen/m_dialog_lr"
+    android:layout_marginLeft="@dimen/m_dialog_lr">
+
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/p_tv"
+        android:text="@string/choose_gender"
+        android:textSize="@dimen/text_size_xlarge"
+        wachat:customFont="@string/font"
+        android:background="@color/block_user_popup_top"
+        android:textColor="@android:color/white"
+        />
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/dialog_gender_choose_tv_both"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/p_tv"
+        android:text="@string/gender_all"
+        android:textSize="@dimen/text_size_xlarge"
+        wachat:customFont="@string/font"
+        android:textColor="@android:color/black"
+        android:visibility="visible"/>
+
+    <View
+        android:id="@+id/dialog_gender_choose_view_both"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_view"
+        android:visibility="visible"
+        android:background="@color/view_gray_color" />
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/dialog_gender_choose_tv_male"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/p_tv"
+        android:text="@string/male"
+        android:textSize="@dimen/text_size_xlarge"
+        wachat:customFont="@string/font"
+        android:textColor="@android:color/black"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_view"
+        android:background="@color/view_gray_color" />
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/dialog_gender_choose_tv_female"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/p_tv"
+        android:text="@string/female"
+        android:textSize="@dimen/text_size_xlarge"
+        wachat:customFont="@string/font"
+        android:textColor="@android:color/black"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_view"
+        android:visibility="gone"
+        android:background="@color/view_gray_color" />
+
+
+</LinearLayout>

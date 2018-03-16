@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true">
+
+    <FrameLayout
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/front"
+        android:layout_alignTop="@+id/front"
+        android:background="@color/chat_swipe_section_color">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--left-->
+            <RelativeLayout
+                android:id="@+id/inflater_fragment_chat_item_rel_more"
+                android:layout_width="@dimen/width_swipe_section"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:background="@color/chat_swipe_section_color">
+
+                <LinearLayout
+                    android:id="@+id/inflater_fragment_chat_item_lnr_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/p_iclude_main">
+
+                    <ImageView
+                        android:id="@+id/inflater_fragment_chat_item_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_chats_more_icon" />
+
+                    <!--android:layout_above="@id/inflater_fragment_chat_item_tv"-->
+
+                    <TextView
+                        android:id="@+id/inflater_fragment_chat_item_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/more"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_size_large" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!--right-->
+            <RelativeLayout
+                android:layout_width="@dimen/width_swipe_section"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/chat_swipe_section_color">
+
+                <LinearLayout
+                    android:id="@+id/inflater_fragment_chat_item_lnr_del"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/p_iclude_main">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@id/inflater_fragment_chat_item_tv"
+                        android:contentDescription="@null"
+                        android:src="@drawable/ic_chats_delete_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/delete"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_size_large" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/front"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/inflater_fragment_chat_item_lnrContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/inflater_fragment_chat_item_rel_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/p_chat_top_rel_tb"
+                android:paddingLeft="@dimen/p_chat_top_rel_lr"
+                android:paddingRight="@dimen/p_chat_top_rel_lr"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:background="@drawable/list_item_selector"
+                android:paddingTop="@dimen/p_chat_top_rel_tb">
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatRoundedView
+                    android:id="@+id/inflater_fragment_chat_item_iv_ProfileImage"
+                    android:layout_width="@dimen/param"
+                    android:layout_height="@dimen/param"
+                    android:layout_alignParentLeft="true"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_chats_noimage_profile" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/inflater_fragment_chat_item_iv_ProfileImage"
+                    android:layout_alignTop="@+id/inflater_fragment_chat_item_iv_ProfileImage"
+                    android:layout_toLeftOf="@+id/inflater_fragment_chat_item_tv_Chat_count"
+                    android:layout_toRightOf="@+id/inflater_fragment_chat_item_iv_ProfileImage"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/p_profile_name_linear">
+
+                    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                        android:id="@+id/inflater_fragment_chat_item_tv_ProfileName"
+                        android:layout_width="match_parent"
+                        android:ellipsize="marquee"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:textStyle="bold"
+                        android:textColor="@color/chat_text_color"
+                        android:textSize="@dimen/text_size_large"
+                        wachat:customFont="@string/font" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/m_status_t"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/inflater_fragment_chat_item_iv_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+
+                        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                            android:id="@+id/inflater_fragment_chat_item_tv_Status"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:gravity="left"
+                            android:textColor="@color/chat_text_color"
+                            android:textSize="@dimen/text_size_medium"
+                            wachat:customFont="@string/font" />
+                    </LinearLayout>
+                </LinearLayout>
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                    android:id="@+id/inflater_fragment_chat_item_tv_Chat_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/inflater_fragment_chat_item_iv_SideArrow"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_small"
+                    android:background="@drawable/ic_notificaton_red_circle"
+                    android:layout_margin="5dp"
+                    wachat:customFont="@string/font"/>
+
+                <ImageView
+                    android:id="@+id/inflater_fragment_chat_item_iv_SideArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_chats_arrow_icon" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/chat_calender_section_gray"
+                android:paddingBottom="@dimen/p_calender_tb"
+                android:paddingLeft="@dimen/p_chat_top_rel_lr"
+                android:paddingRight="@dimen/p_calender_r"
+                android:paddingTop="@dimen/p_calender_tb">
+
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                    android:id="@+id/inflater_fragment_chat_item_tv_receive_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/ic_chats_calender_icon"
+                    android:drawablePadding="5dp"
+                    android:textSize="@dimen/text_size_small"
+                    wachat:customFont="@string/font" />
+
+                <ImageView
+                    android:id="@+id/inflater_fragment_chat_item_iv_Favourie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/selector_contact_favourite" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

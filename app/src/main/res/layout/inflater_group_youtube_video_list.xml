@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+
+        <ImageView
+            android:id="@+id/iv_vid_thumb"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="16dp"
+
+            android:background="@android:color/white" />
+
+
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/tv_vid_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/iv_vid_thumb"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="@string/text_profile_name"
+            android:textColor="@color/chat_text_color"
+            android:textSize="@dimen/text_size_medium"
+            wachat:customFont="@string/font" />
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_vid_title"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/iv_vid_thumb"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@string/text_profile_status"
+            android:textColor="@color/chat_text_color"
+            android:textSize="@dimen/text_size_small"
+            wachat:customFont="@string/font" />
+
+
+        <ImageView
+            android:id="@+id/youtube_share_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_desc"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/iv_vid_thumb"
+            android:background="@null"
+            android:padding="@dimen/p_number_box"
+            android:src="@drawable/ic_yahoo_news_large_share_icon" />
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_desc"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/ic_date_icon"
+            android:drawablePadding="@dimen/m_reg_common_top"
+            android:gravity="bottom|right"
+            android:singleLine="true"
+            android:textColor="@color/chat_text_color"
+            android:textSize="@dimen/text_size_extra_small"
+            wachat:customFont="@string/font" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/view_gray_color" />
+</LinearLayout>

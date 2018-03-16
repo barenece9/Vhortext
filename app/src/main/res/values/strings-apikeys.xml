@@ -1,0 +1,16 @@
+<resources>
+
+
+    <!--Client credential used-->
+    <string name="youtube_api_key_client">AIzaSyA92q3pXq4SXMTcmT7pHnbx4LkfjEcnAhc</string>
+
+
+    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">
+       AIzaSyC0waQwRbXCIbVUl51IizzQwrhXwa1aUv4
+    </string>
+
+    <!--Client key (purchased)-->
+    <string name="google_translate_key" translatable="false" templateMergeStrategy="preserve">
+      AIzaSyDqGpAf3rIY7ORwu1J15MkYjlJJrMNcJnk
+    </string>
+</resources>

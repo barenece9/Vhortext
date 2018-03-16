@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cell"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/ib_cell_chat_text_translation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="-10dp"
+        android:layout_marginTop="10dp"
+        android:elevation="1.2dp"
+        android:src="@drawable/ic_chat_translation_off_icon_earth"
+        android:background="@android:color/transparent"
+        android:layout_toRightOf="@+id/cell_chat_rl_translated_text"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/cell_chat_rl_translated_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="5dp"
+        android:paddingEnd="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingStart="5dp"
+        android:paddingTop="5dp"
+        android:visibility="visible">
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/tv_group_sender_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="2dp"
+            android:gravity="left"
+            android:textColorLink="@android:color/black"
+            android:textSize="@dimen/text_size_small"
+            wachat:customFont="@string/font_bold" />
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/tv_Msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_group_sender_name"
+            android:layout_margin="2dp"
+            android:autoLink="all"
+            android:gravity="left"
+            android:textColorLink="@android:color/black"
+            android:textSize="@dimen/text_size_large"
+            wachat:customFont="@string/font" />
+
+        <ImageView
+            android:id="@+id/img_translate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/tv_Msg"
+            android:layout_marginRight="@dimen/m_status_t"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="2dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_chat_bubble_globe_icon"
+            android:visibility="gone" />
+
+        <!-- android:layout_toLeftOf="@+id/tv_Date"-->
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/tv_Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/tv_Msg"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@id/tv_Msg"
+            android:layout_below="@id/tv_Msg"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="5dp"
+            android:text=""
+            android:textSize="@dimen/text_size_extra_small"
+            wachat:customFont="@string/font" />
+
+
+        <ImageView
+            android:id="@+id/img_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/tv_Msg"
+            android:layout_toRightOf="@+id/tv_Date"
+            android:contentDescription="@null"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>
+
+

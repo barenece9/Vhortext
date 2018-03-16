@@ -1,0 +1,600 @@
+<resources>
+    <string name="app_name">VhortextTest</string>
+
+    <string name="font_bold">font/Roboto-Regular_1.ttf</string>
+    <string name="font">font/Roboto-Light_1.ttf</string>
+
+    <string name="hello_world">Hello world!</string>
+
+    <!-- wachat string -->
+    <string name="text_member">Member</string>
+    <string name="text_admin">Admin</string>
+
+
+    <!-- common alert-->
+    <string name="no_internet">No internet connection available!</string>
+    <string name="already_paired">You are already registered with another device. Do you want to proceed using this device?</string>
+
+    <!--toolbar-->
+
+    <!-- Search -->
+
+    <!-- registration -->
+    <string name="et_hint_phone_number">Enter mobile number</string>
+    <string name="alert_no_country">Please enter your country code.</string>
+    <string name="alert_enter_name">Please enter your name.</string>
+    <string name="alert_enter_mobile_number">Please enter your mobile number.</string>
+    <!-- chat screen inflater -->
+    <string name="text_profile_name">Bobby Mackenna</string>
+    <string name="text_profile_status">Check out my new icons!!</string>
+    <string name="receive_at">Received</string>
+    <string name="sent_at">Sent</string>
+
+    <!-- invite friend inflater -->
+    <string name="frined_name">Friend Name</string>
+
+    <!-- Group chat screen inflater -->
+    <string name="text_group_name">My Friends</string>
+    <string name="text_group_status">We are friends..</string>
+
+
+    <!-- more screen options text -->
+    <string name="invite">Invite Friends</string>
+    <string name="edit">Edit Profile</string>
+    <string name="view_block_user">View Block User</string>
+    <string name="update_status">Update Status</string>
+    <string name="delete_acc">Delete Account</string>
+    <string name="settings">Settings</string>
+
+    <!--new group screen-->
+    <string name="provide_grp_sub_icon">Please provide group subject and optional group icon</string>
+    <string name="group_text">Type group subject here...</string>
+
+    <!--new group screen-->
+
+    <string name="provide_grp_sub_icon_new">SET PROFILE PICTURE</string>
+    <string name="group_name_text">Group Name: </string>
+
+
+    <!--  screen title-->
+
+    <string name="chats">Chats</string>
+    <string name="favorite">Favorites</string>
+    <string name="groups">Groups</string>
+    <string name="contacts">Contacts</string>
+    <string name="more">More</string>
+    <string name="newGroup">New Group</string>
+    <string name="editGroup">Edit Group</string>
+    <string name="blockUser">Block User</string>
+    <string name="editProfile">Edit Profile</string>
+    <string name="updateStatus">Status</string>
+    <string name="selectCountry">Select Country</string>
+    <string name="findPeople">Find People</string>
+    <string name="shareImage">Share Image</string>
+    <string name="choosePeople">Choose People</string>
+    <string name="authentication">Authentication</string>
+    <string name="selectLanguage">Select Language</string>
+    <string name="friendProfile">Friend Profile</string>
+    <string name="inviteFriends">Invite Friends</string>
+    <string name="setLocation">Set Location</string>
+    <string name="viewLocation">View Location</string>
+    <string name="ActivityYouTubeVideoList">YouTube</string>
+    <string name="ActivityYahooNewsList">Yahoo News</string>
+    <string name="registration">Registration</string>
+    <!--authentication-->
+
+    <string name="authentication_text"> We have sent a sms with activation code to your phone</string>
+
+    <string name="verification_text">We have sent a sms with activation code to your phone</string>
+
+    <string name="device_activation_text">Your device is not active now</string>
+
+    <string name="for_device_activation_text">for activate this device</string>
+
+    <string name="reset_ph_no">Re-enter phone number</string>
+    <string name="resend_code">Resend verification code</string>
+    <string name="send_code">Send verification code</string>
+
+    <!--create new group-->
+    <string name="add_at_least_two_memeber">Add atleast two member to create</string>
+    <string name="select_at_least_one_friend">Please select a friend to send invitation</string>
+    <string name="hint_search">search...</string>
+
+
+    <!--settings screen-->
+
+    <string name="find_me_by_location">Find Me by My Location</string>
+    <string name="find_me_by_ph_no">Keep My Phone Number Private</string>
+    <string name="about">About</string>
+    <string name="help">Help/FAQ</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="copyright_info">Copyright info</string>
+
+    <!--dialog more-->
+    <string name="clear_conversation">Clear Conversation</string>
+    <string name="email_conversation">Email Conversation</string>
+    <string name="block">Block</string>
+
+    <!-- dialog delete-->
+    <string name="delete_text">Do you want to delete ?</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="clear_conv">All conversation deleted successfully</string>
+
+    <string name="acc_delete_text">Do you want to delete this account?</string>
+    <string name="invite_text">Do you want to invite %1$s?</string>
+    <string name="invite_text_generic">Do you want to invite this friend?</string>
+
+    <!--    unblock dilaog-->
+    <string name="unblock_text">Do you want to unblock this person ?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+
+    <!-- dialog gender-->
+    <string name="choose_gender">Choose Your Gender</string>
+    <string name="female">Female</string>
+
+    <!-- dialog registartion confirmation-->
+    <string name="reg_confirmation_text">Do you want to register with</string>
+    <string name="confirm">Confirm</string>
+
+    <!--dialog blcok user popup-->
+    <string name="view_profile">View Profile</string>
+    <string name="unblock">Unblock</string>
+
+    <!--dialog view group deatils -->
+    <string name="promote">Promote</string>
+    <string name="demote">Demote</string>
+    <string name="remove">Remove</string>
+    <string name="addToContact">Add To Contact</string>
+
+    <!--status-->
+    <string name="your_currnt_status">Your current status</string>
+    <string name="select_new_status">Select your new status</string>
+
+    <!--add mask-->
+    <string name="send">Send</string>
+
+
+    <!--share image-->
+    <string name="ad_caption">Add a caption...</string>
+
+    <!--  find people-->
+    <string name="my_contacts">Search My Vhortext Contacts</string>
+    <string name="nearby_user">Search with Nearby Users</string>
+    <string name="around_globe">Search around the Globe</string>
+
+    <!--chat screen-->
+
+    <string name="et_hint_chat">Enter message</string>
+    <string name="video">Video</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="location">Location</string>
+    <string name="contact">Contact</string>
+    <string name="youtube">YouTube</string>
+    <string name="news">News</string>
+    <string name="sketch">Sketch</string>
+
+    <string name="toast_block_user">You have blocked this person</string>
+
+    <!--select country-->
+    <string name="search_your_country">Search Your Country</string>
+
+
+    <!-- include chat request-->
+
+
+    <!--  chat drop down-->
+    <string name="classmate">Classmate</string>
+    <string name="friend">Friend</string>
+    <string name="acquaintance">Acquaintance</string>
+    <string name="coworker">Co-worker</string>
+    <string name="colleague">Colleague</string>
+    <string name="other">Other</string>
+
+    <!--    edit profile-->
+
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="select_gender">Select Gender</string>
+
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="save">Save</string>
+
+    <!--    choose people-->
+    <string name="et_search_hint">Search by Name or Phone No</string>
+
+    <!--  map-->
+    <!--    view group details-->
+    <string name="media">Media</string>
+    <string name="admin">Admin</string>
+    <string name="exitGroup">Exit Group</string>
+    <string name="participants">Members</string>
+    <string name="blockParticipants">Blocked Members</string>
+
+    <!--toast strinmg-->
+
+
+    <string name="share_img_limit">Maximum 10 items please</string>
+    <string name="share_no_image_selected">No image selected</string>
+
+    <string name="invite_send_succ">Your invitation sent successfully</string>
+    <string name="invite_unsucc">Unsuccessful to send your invitation</string>
+
+
+    <string name="title_activity_maps">Map</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="no_data">No Data available</string>
+    <string name="no_search">No search data available</string>
+    <string name="network_try">Something went wrong! Please try again.</string>
+    <string name="profile_update_success">Profile updated successfully.</string>
+
+
+    <string name="ContactBroadcast">Vhortext.ContactSync</string>
+    <string name="gps_settings_header">GPS settings</string>
+    <string name="gps_not_enabled_redirect_message">GPS is not enabled. Do you want to go to settings menu?</string>
+    <string name="email_subject">Vhortext Chat with</string>
+    <string name="no_fav_list">No favorite found.</string>
+    <string name="no_contacts_list">No contacts found.</string>
+    <string name="no_group_list">No group found.</string>
+    <string name="select_lang_hint">Select your language</string>
+    <string name="contact_details">Contact Details</string>
+    <string name="view_location">View Location</string>
+    <string name="address_not_available">Address not available. Please try again.</string>
+    <string name="cotact_pick_no_number">Seems like something error in your selected number. Please try again.</string>
+    <string name="contact_pick_no_number">Please select at least one number to send</string>
+    <string name="translation_off">Translation Off</string>
+    <string name="translation_on">Translation On</string>
+
+    <string name="notification_off">Notification Off</string>
+    <string name="notification_on">Notification On</string>
+
+    <string name="retry_settings_location_alert">Your location service is off please activate location service to search</string>
+    <string name="around_the_globe">Around The Globe</string>
+    <string name="no_people_found">No Search Result Found</string>
+    <string name="alert.failure.video_pick">Failed to fetch video</string>
+    <string name="alert.failure.video_path_empty">Empty or corrupted video file</string>
+    <string name="alert.failure.video_player_not_found">No supported video player found</string>
+    <string name="alert.error.invalid_phone_number">Please provide a valid mobile number</string>
+    <string name="error.label.no_blocked_user">No blocked user found</string>
+    <string name="no_conversation_found">No Conversation Found</string>
+    <string name="ok">Ok</string>
+    <string name="alert.warn.user_blocked_need_to_unblock_to_favourite">Friend needs to be unblocked to make as favorite</string>
+    <string name="alert.warn.friend_will_be_unfavourite_once_block">Friend will be unfavorite once you block</string>
+
+    <string name="alert.failure.unknown_error">Something went wrong. Please try again </string>
+    <string name="alert.failure.network_time_out">Connection timed out</string>
+    <string name="alert.failure.network_connection_failed">Failed to connect. Please check your internet connection</string>
+    <string name="alert.failure.server_connection_failed_">Failed to connect to server. Please try again</string>
+    <string name="no_description">No description</string>
+    <string name="alert_failure_yahoo_not_found">"No supported browser found. "</string>
+    <string name="copyrights">Copyright @2015 Vhortext. All rights reserved.</string>
+    <string name="subject">Subject</string>
+    <string name="message">Message</string>
+    <string name="add_attachment">Add attachments (optional):</string>
+
+    <string name="chooserIntent">Select Source</string>
+    <string name="alert_select_country_error_new">Failed to detect Country code. Please enter the country code</string>
+    <string name="title_activity_activity_tutorial">ActivityTutorial</string>
+
+    <!--Copy Right-->
+    <string name="you">You</string>
+    <string name="please_wait">Please wait</string>
+    <string name="alert_leave_group">Sure you want to exit this group?</string>
+    <string name="alert_delete_group">Sure you want to delete this group?</string>
+
+    <string name="alert_delete_chat_item">Do you want to delete the message?</string>
+    <!--<string name="live_simple_be_awsm">Live simple, be awesome</string>-->
+
+    <string name="be_the_best_you">Be the best you</string>
+
+    <string name="blank_status_alert">Please set your status first</string>
+    <string name="alert_remove_member_from_group">Do you want to remove this friend from this group?</string>
+    <string name="alert_leave_group_success">You are no longer a participant in this group.</string>
+    <string name="alert_delete_group_success">The group has been deleted successfully.</string>
+    <string name="alert_promote_before_leaving_group">You need to promote a member before leaving the group</string>
+    <string name="vhortext_copyright_details">All intellectual property rights in or to Vhortext and any Vhortext Services (including any future updates, upgrades and new versions to all such Vhortext Service), will continue to belong to us and our licensors. The design of the Vhortext service along with Vhortext created text, graphic, scripts, interactive features and the like, and the trademarks, service marks and logos contained therein (“Mark”), are owned by and licensed to Vhortext, subject to copyright and other intellectual property rights under the US and foreign laws and international conventions. Except as expressly provided in these Terms, you have no right to use our intellectual property rights. In particular, you have no right to use our trademarks or product names, logos, domain names or other distinctive brand features without our prior written consent. Any comments or suggestions you may provide regarding Vhortext are entirely voluntary and we will be free to use these comments and suggestions at our discretion without any payment or other obligation to you. The Service is provided to you AS IS for your information and personal use only. Vhortext reserves all rights not expressly granted in and to the Service. You agree to not engage in the use, copying, or distribution of any of the Service other than expressly permitted herein, including any use, copying, or distribution of Status Submissions of third parties obtained through the Service for any commercial purposes.</string>
+    <string name="profile_alert_profile_name_blank">Name can not be blank</string>
+    <string name="gender_all">All</string>
+    <string name="term_of_use_and_privacy_policy">Terms of Use &#038; Privacy Policy</string>
+    <string name="intellectual_property_rights">Intellectual Property Rights</string>
+    <string name="terms_of_use">Terms of Use</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="mobile_no">Mobile no.</string>
+    <string name="tap_agree_and_continue_to_accept">Tap \"Agree and Continue\" to accept</string>
+    <string name="not_specified">Not specified</string>
+    <string name="activity_contact_sync">Contact Sync</string>
+
+
+    <!--message status-->
+    <!--<string name="status_pending_id">1</string>
+    <string name="status_pending_name">Pending</string>
+    <string name="status_send_id">2</string>
+    <string name="status_send_name">Send</string>-->
+    <!--<string name="status_receive_id">3</string>
+    <string name="status_receive_name">Received</string>
+    <string name="status_read_id">4</string>
+    <string name="status_read_name">Read</string>
+
+    <string name="status_block_id">5</string>
+    <string name="status_block_name">Blocked</string>-->
+
+
+
+    <!---->
+    <string name="status_pending_id">1</string>
+    <string name="status_pending_name">Pending</string>
+
+    <string name="status_send_id">2</string>
+    <string name="status_send_name">Send</string>
+
+    <string name="status_receive_local_id">3</string>
+    <string name="status_receive_local_name">Received</string>
+
+    <string name="status_receive_server_id">4</string>
+    <string name="status_receive_server_name">Received</string>
+
+    <string name="status_read_local_id">5</string>
+    <string name="status_read_local_name">Read</string>
+
+    <string name="status_read_server_id">6</string>
+    <string name="status_read_server_name">Read</string>
+
+    <string name="status_block_local_id">7</string>
+    <string name="status_block_local_name">Blocked</string>
+
+    <string name="status_block_server_id">8</string>
+    <string name="status_block_server_name">Blocked</string>
+    <!---->
+
+
+    <string name="pick_image_intent_chooser_title">Select source</string>
+    <string name="crop_image_activity_title"></string>
+    <string name="crop_image_menu_rotate_left">Rotate counter clockwise</string>
+    <string name="crop_image_menu_rotate_right">Rotate</string>
+    <string name="crop_image_menu_crop">Crop</string>
+    <string name="crop_image_menu_chose">Chose</string>
+    <string name="crop_image_menu_flip">Flip</string>
+    <string name="crop_image_menu_flip_horizontally">Flip horizontally</string>
+    <string name="crop_image_menu_flip_vertically">Flip vertically</string>
+
+    <string name="main_action_crop">SAVE</string>
+    <string name="main_action_rotate">Rotate 90 degrees clockwise</string>
+    <string name="main_action_flip">Flip</string>
+    <string name="main_action_flip_horizontally">Flip horizontally</string>
+    <string name="main_action_flip_vertically">Flip vertically</string>
+
+
+
+
+
+
+
+    <string-array name="CountryCodes" >
+        <item>93,AF</item>
+        <item>355,AL</item>
+        <item>213,DZ</item>
+        <item>376,AD</item>
+        <item>244,AO</item>
+        <item>672,AQ</item>
+        <item>54,AR</item>
+        <item>374,AM</item>
+        <item>297,AW</item>
+        <item>61,AU</item>
+        <item>43,AT</item>
+        <item>994,AZ</item>
+        <item>973,BH</item>
+        <item>880,BD</item>
+        <item>375,BY</item>
+        <item>32,BE</item>
+        <item>501,BZ</item>
+        <item>229,BJ</item>
+        <item>975,BT</item>
+        <item>591,BO</item>
+        <item>387,BA</item>
+        <item>267,BW</item>
+        <item>55,BR</item>
+        <item>673,BN</item>
+        <item>359,BG</item>
+        <item>226,BF</item>
+        <item>95,MM</item>
+        <item>257,BI</item>
+        <item>855,KH</item>
+        <item>237,CM</item>
+        <item>1,CA</item>
+        <item>238,CV</item>
+        <item>236,CF</item>
+        <item>235,TD</item>
+        <item>56,CL</item>
+        <item>86,CN</item>
+        <item>61,CX</item>
+        <item>61,CC</item>
+        <item>57,CO</item>
+        <item>269,KM</item>
+        <item>242,CG</item>
+        <item>243,CD</item>
+        <item>682,CK</item>
+        <item>506,CR</item>
+        <item>385,HR</item>
+        <item>53,CU</item>
+        <item>357,CY</item>
+        <item>420,CZ</item>
+        <item>45,DK</item>
+        <item>253,DJ</item>
+        <item>670,TL</item>
+        <item>593,EC</item>
+        <item>20,EG</item>
+        <item>503,SV</item>
+        <item>240,GQ</item>
+        <item>291,ER</item>
+        <item>372,EE</item>
+        <item>251,ET</item>
+        <item>500,FK</item>
+        <item>298,FO</item>
+        <item>679,FJ</item>
+        <item>358,FI</item>
+        <item>33,FR</item>
+        <item>689,PF</item>
+        <item>241,GA</item>
+        <item>220,GM</item>
+        <item>995,GE</item>
+        <item>49,DE</item>
+        <item>233,GH</item>
+        <item>350,GI</item>
+        <item>30,GR</item>
+        <item>299,GL</item>
+        <item>502,GT</item>
+        <item>224,GN</item>
+        <item>245,GW</item>
+        <item>592,GY</item>
+        <item>509,HT</item>
+        <item>504,HN</item>
+        <item>852,HK</item>
+        <item>36,HU</item>
+        <item>91,IN</item>
+        <item>62,ID</item>
+        <item>98,IR</item>
+        <item>964,IQ</item>
+        <item>353,IE</item>
+        <item>44,IM</item>
+        <item>972,IL</item>
+        <item>39,IT</item>
+        <item>225,CI</item>
+        <item>81,JP</item>
+        <item>962,JO</item>
+        <item>7,KZ</item>
+        <item>254,KE</item>
+        <item>686,KI</item>
+        <item>965,KW</item>
+        <item>996,KG</item>
+        <item>856,LA</item>
+        <item>371,LV</item>
+        <item>961,LB</item>
+        <item>266,LS</item>
+        <item>231,LR</item>
+        <item>218,LY</item>
+        <item>423,LI</item>
+        <item>370,LT</item>
+        <item>352,LU</item>
+        <item>853,MO</item>
+        <item>389,MK</item>
+        <item>261,MG</item>
+        <item>265,MW</item>
+        <item>60,MY</item>
+        <item>960,MV</item>
+        <item>223,ML</item>
+        <item>356,MT</item>
+        <item>692,MH</item>
+        <item>222,MR</item>
+        <item>230,MU</item>
+        <item>262,YT</item>
+        <item>52,MX</item>
+        <item>691,FM</item>
+        <item>373,MD</item>
+        <item>377,MC</item>
+        <item>976,MN</item>
+        <item>382,ME</item>
+        <item>212,MA</item>
+        <item>258,MZ</item>
+        <item>264,NA</item>
+        <item>674,NR</item>
+        <item>977,NP</item>
+        <item>31,NL</item>
+        <item>599,AN</item>
+        <item>687,NC</item>
+        <item>64,NZ</item>
+        <item>505,NI</item>
+        <item>227,NE</item>
+        <item>234,NG</item>
+        <item>683,NU</item>
+        <item>850,KP</item>
+        <item>47,NO</item>
+        <item>968,OM</item>
+        <item>92,PK</item>
+        <item>680,PW</item>
+        <item>507,PA</item>
+        <item>675,PG</item>
+        <item>595,PY</item>
+        <item>51,PE</item>
+        <item>63,PH</item>
+        <item>870,PN</item>
+        <item>48,PL</item>
+        <item>351,PT</item>
+        <item>1,PR</item>
+        <item>974,QA</item>
+        <item>40,RO</item>
+        <item>7,RU</item>
+        <item>250,RW</item>
+        <item>590,BL</item>
+        <item>685,WS</item>
+        <item>378,SM</item>
+        <item>239,ST</item>
+        <item>966,SA</item>
+        <item>221,SN</item>
+        <item>381,RS</item>
+        <item>248,SC</item>
+        <item>232,SL</item>
+        <item>65,SG</item>
+        <item>421,SK</item>
+        <item>386,SI</item>
+        <item>677,SB</item>
+        <item>252,SO</item>
+        <item>27,ZA</item>
+        <item>82,KR</item>
+        <item>34,ES</item>
+        <item>94,LK</item>
+        <item>290,SH</item>
+        <item>508,PM</item>
+        <item>249,SD</item>
+        <item>597,SR</item>
+        <item>268,SZ</item>
+        <item>46,SE</item>
+        <item>41,CH</item>
+        <item>963,SY</item>
+        <item>886,TW</item>
+        <item>992,TJ</item>
+        <item>255,TZ</item>
+        <item>66,TH</item>
+        <item>228,TG</item>
+        <item>690,TK</item>
+        <item>676,TO</item>
+        <item>216,TN</item>
+        <item>90,TR</item>
+        <item>993,TM</item>
+        <item>688,TV</item>
+        <item>971,AE</item>
+        <item>256,UG</item>
+        <item>44,GB</item>
+        <item>380,UA</item>
+        <item>598,UY</item>
+        <item>1,US</item>
+        <item>998,UZ</item>
+        <item>678,VU</item>
+        <item>39,VA</item>
+        <item>58,VE</item>
+        <item>84,VN</item>
+        <item>681,WF</item>
+        <item>967,YE</item>
+        <item>260,ZM</item>
+        <item>263,ZW</item>
+    </string-array>
+
+    <string name="done">Done</string>
+    <string name="ic_close">"\ue918"</string>
+    <string name="ic_text">"\ue945"</string>
+    <string name="ic_draw">""\ue944</string>
+    <string name="ic_images">"\ue949"</string>
+    <string name="ic_save">"\ue946"</string>
+    <string name="ic_clear_all">"\ue947"</string>
+    <string name="ic_continue">"\ue948"</string>
+    <string name="ic_delete">"\ue92c"</string>
+    <string name="choose_from_gallery">Choose From Gallery</string>
+    <string name="choose_from_camera">Choose From Camera</string>
+    <string name="undo">Undo</string>
+    <string name="erase">Erase</string>
+
+</resources>

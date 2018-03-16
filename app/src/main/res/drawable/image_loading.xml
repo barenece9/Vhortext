@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="rectangle">
+            <stroke android:width="0.5dp" android:color="@color/app_Brown" />
+            <padding android:left="250dp"
+                android:top="250dp"
+                android:right="250dp"
+                android:bottom="250dp" />
+            <corners android:radius="1dp" />
+
+            <solid android:color="@color/mask_color"/>
+        </shape>
+    </item>
+   <!-- <item
+        android:gravity="center"
+        android:height="40dp"
+        android:width="40dp"
+        android:drawable="@drawable/waiting_hd" />-->
+
+
+    <rotate
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:fromDegrees="90"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toDegrees="360"
+        android:gravity="center">
+
+        <item
+            android:gravity="center"
+            android:height="40dp"
+            android:width="40dp"
+            android:drawable="@drawable/icons8_wait_40" />
+
+        <!--<shape
+            android:innerRadiusRatio="3"
+            android:shape="ring"
+            android:thicknessRatio="7.0">
+
+            <gradient
+                android:centerColor="#f0bd79"
+                android:endColor="#f0bd79"
+                android:startColor="#f0bd79"
+                android:angle="0"
+                android:type="sweep"
+                android:useLevel="false" />
+
+
+        </shape>-->
+
+    </rotate>
+</layer-list>
+

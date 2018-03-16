@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_chat_background">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/toolbar_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/txt_subtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/m_common"
+                android:background="@drawable/border_all_side"
+                android:hint="@string/subject"
+                android:padding="@dimen/m_common"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textCursorDrawable="@null" />
+
+            <EditText
+                android:id="@+id/txt_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_subtext"
+                android:layout_margin="@dimen/m_common"
+                android:background="@drawable/border_all_side"
+                android:gravity="top"
+                android:hint="@string/message"
+                android:minLines="7"
+                android:padding="@dimen/m_common"
+                android:textColor="@android:color/black"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:id="@+id/add_attachment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_message"
+                android:layout_margin="@dimen/m_common"
+                android:padding="@dimen/m_common"
+                android:text="@string/add_attachment"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_large"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_attachement"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_alignLeft="@+id/add_attachment"
+                android:layout_below="@+id/add_attachment"
+                android:layout_margin="@dimen/m_common"
+                android:src="@drawable/ic_share_image_screen_plus_photos"
+                android:visibility="visible" />
+
+
+            <LinearLayout
+                android:id="@+id/lnr_Bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_attachement"
+                android:layout_margin="@dimen/m_common"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/p_btn">
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_edit_profile_save_button"
+                    android:gravity="center"
+                    android:padding="@dimen/p_btn"
+                    android:text="@string/send"
+                    android:textAllCaps="false"
+                    android:textColor="@color/ed_profile_txt_color"
+                    android:textSize="@dimen/text_size_large" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.1" />
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_edit_profile_cancel_button"
+                    android:gravity="center"
+                    android:padding="@dimen/p_btn"
+                    android:text="@string/cancel"
+                    android:textAllCaps="false"
+                    android:textColor="@color/ed_profile_txt_color"
+                    android:textSize="@dimen/text_size_large" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBar"
+        android:layout_gravity="center">
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ProgressBarCircularIndeterminate
+            android:id="@+id/progressBarCircularIndetermininate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/app_Brown"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

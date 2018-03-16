@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/inflater_block_user_item_rel_top"
+        android:background="@drawable/list_item_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatRoundedView
+            android:id="@+id/inflater_block_user_item_iv_ProfileImage"
+            android:layout_width="@dimen/param"
+            android:layout_height="@dimen/param"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="@dimen/p_chat_top_rel_tb"
+            android:layout_marginLeft="@dimen/p_chat_top_rel_lr"
+            android:layout_marginRight="@dimen/p_chat_top_rel_lr"
+            android:layout_marginTop="@dimen/p_chat_top_rel_tb"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_chats_noimage_profile" />
+
+        <LinearLayout
+            android:id="@+id/inflater_block_user_item_lnr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/p_chat_top_rel_tb"
+            android:layout_marginTop="@dimen/p_chat_top_rel_tb"
+            android:layout_toLeftOf="@+id/inflater_block_user_item_rl_block"
+            android:layout_toRightOf="@+id/inflater_block_user_item_iv_ProfileImage"
+            android:orientation="vertical">
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                android:id="@+id/inflater_block_user_item_tv_ProfileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/text_profile_name"
+                android:textColor="@color/chat_text_color"
+                android:textSize="@dimen/text_size_large"
+                wachat:customFont="@string/font" />
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                android:id="@+id/inflater_block_user_item_tv_Status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_status_t"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:text="@string/text_profile_status"
+                android:textColor="@color/chat_text_color"
+                android:textSize="@dimen/text_size_medium"
+                wachat:customFont="@string/font" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/inflater_block_user_item_rl_block"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:descendantFocusability="blocksDescendants"
+            android:gravity="center"
+
+            android:padding="@dimen/view_small_margin">
+
+            <ImageView
+                android:id="@+id/inflater_block_user_item_iv_block"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/p_chat_top_rel_tb"
+                android:layout_marginLeft="@dimen/p_chat_top_rel_lr"
+                android:layout_marginRight="@dimen/p_chat_top_rel_lr"
+                android:layout_marginTop="@dimen/p_chat_top_rel_tb"
+                android:src="@drawable/selector_block_unblock" />
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ProgressBarCircularIndeterminate
+                android:id="@+id/inflater_block_user_item_progressBar_iv_block"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/inflater_block_user_item_iv_block"
+                android:visibility="gone"
+                wachat:cpb_strokeWidth="2" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/p_chat_top_rel_tb"
+        android:layout_marginRight="@dimen/p_chat_top_rel_tb"
+        android:background="@color/view_yellow_color" />
+
+
+</LinearLayout>

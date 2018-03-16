@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8d6b4a">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/toolbar_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+
+    <!--top section-->
+    <RelativeLayout
+        android:id="@+id/rel_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/friend_profile_other_details_rl_wrap"
+        android:layout_below="@+id/appBar">
+
+
+        <ImageView
+            android:id="@+id/iv_blur_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/profile_iv_placeholder"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_edit_profile_no_image_placeholder_white" />
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ProgressBarCircularIndeterminate
+                android:id="@+id/progressBar_profile_image_load"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+                android:background="#8d6b4a"
+                android:visibility="visible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/transluscent_app_Brown"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:maxLength="25"
+                android:paddingBottom="5dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@android:color/white"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/text_size_xlarge" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_name"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/ic_edit_profile_name_text_area_small"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/friend_profile_other_details_rl_wrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/background_material_light">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transluscent_black"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingStart="16dp"
+            android:paddingRight="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="25dp">
+
+            <RelativeLayout
+                android:id="@+id/rel_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:drawableLeft="@drawable/ic_edit_profile_mobile_icon"
+                    android:drawablePadding="@dimen/p_drawable"
+                    android:gravity="center_vertical"
+
+                    android:text="@string/mobile_no"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_xlarge"
+                    wachat:customFont="@string/font_bold" />
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                    android:id="@+id/tv_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ic_edit_profile_gender_selection_box_without_arrow"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/p_left"
+                    android:paddingRight="@dimen/p_left"
+                    android:textColor="@color/ed_profile_txt_color"
+                    android:textSize="@dimen/text_size_medium"
+                    wachat:customFont="@string/font_bold" />
+
+            </RelativeLayout>
+
+            <!--gender-->
+            <RelativeLayout
+                android:id="@+id/rel_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:drawableLeft="@drawable/ic_edit_profile_gender_icon"
+                    android:drawablePadding="@dimen/p_drawable"
+                    android:gravity="center_vertical"
+                    android:shadowColor="@android:color/darker_gray"
+
+                    android:text="@string/gender"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_xlarge"
+                    wachat:customFont="@string/font_bold" />
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                    android:id="@+id/tv_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ic_edit_profile_gender_selection_box_without_arrow"
+                    android:gravity="center"
+
+                    android:text="Not Identified"
+
+                    android:textColor="@color/ed_profile_txt_color"
+                    android:textSize="@dimen/text_size_medium"
+                    wachat:customFont="@string/font_bold" />
+
+            </RelativeLayout>
+
+
+            <!--language-->
+
+            <RelativeLayout
+                android:id="@+id/rel_lan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:drawableLeft="@drawable/ic_edit_profile_language_icon"
+                    android:drawablePadding="@dimen/p_drawable"
+                    android:gravity="center_vertical"
+                    android:shadowColor="@android:color/darker_gray"
+
+                    android:text="@string/language"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_xlarge"
+                    wachat:customFont="@string/font_bold" />
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                    android:id="@+id/tv_language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ic_edit_profile_gender_selection_box_without_arrow"
+                    android:gravity="center"
+
+                    android:text="Not Identified"
+                    android:textColor="@color/ed_profile_txt_color"
+                    android:textSize="@dimen/text_size_medium"
+                    wachat:customFont="@string/font_bold" />
+
+            </RelativeLayout>
+
+            <!--bottom section-->
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ProgressBarCircularIndeterminate
+            android:id="@+id/progressBarCircularIndetermininate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/app_Brown"
+            android:visibility="visible" />
+    </RelativeLayout>
+</RelativeLayout>
+

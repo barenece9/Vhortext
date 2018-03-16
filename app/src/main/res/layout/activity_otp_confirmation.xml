@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/toolbar_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/tv_device_active"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/device_activation_text"
+        android:textColor="@color/app_Brown"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_medium"/>
+
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/activity_authentication_tv_auth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/app_Brown"
+        android:textSize="@dimen/text_size_medium"
+        android:text="@string/device_activation_text"
+        wachat:customFont="@string/font" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/view_gray_color" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText
+                android:id="@+id/activity_authentication_et1"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:paddingBottom="@dimen/p_chat_top_rel_tb"
+                android:background="@drawable/authen_edit_back"
+                android:textCursorDrawable="@null"
+                wachat:customFont="@string/font" />
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText
+                android:id="@+id/activity_authentication_et2"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:paddingBottom="@dimen/p_chat_top_rel_tb"
+                android:background="@drawable/authen_edit_back"
+                android:textCursorDrawable="@null"
+                wachat:customFont="@string/font" />
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText
+                android:id="@+id/activity_authentication_et3"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:paddingBottom="@dimen/p_chat_top_rel_tb"
+                android:background="@drawable/authen_edit_back"
+                android:textCursorDrawable="@null"
+                android:singleLine="true"
+
+
+
+                wachat:customFont="@string/font" />
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText
+                android:id="@+id/activity_authentication_et4"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:paddingBottom="@dimen/p_chat_top_rel_tb"
+                android:background="@drawable/authen_edit_back"
+                android:textCursorDrawable="@null"
+                wachat:customFont="@string/font" />
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText
+                android:id="@+id/activity_authentication_et5"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:paddingBottom="@dimen/p_chat_top_rel_tb"
+                android:background="@drawable/authen_edit_back"
+                android:textCursorDrawable="@null"
+                wachat:customFont="@string/font" />
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText
+                android:id="@+id/activity_authentication_et6"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:paddingBottom="@dimen/p_chat_top_rel_tb"
+                android:background="@drawable/authen_edit_back"
+                android:textCursorDrawable="@null"
+                wachat:customFont="@string/font" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/view_gray_color" />
+
+
+
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/activity_authentication_tv_reEnterPh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:padding="5dp"
+        android:text="@string/reset_ph_no"
+        android:textColor="@color/app_Brown"
+        android:textSize="@dimen/text_size_medium"
+        wachat:customFont="@string/font"
+        android:visibility="gone"/>
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/activity_authentication_tv_resendOTP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:text="@string/resend_code"
+        android:textColor="@color/app_Brown"
+        android:textSize="@dimen/text_size_medium"
+        wachat:customFont="@string/font" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ProgressBarCircularIndeterminate
+            android:id="@+id/activity_authentication_progressBarCircular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:background="@color/app_Brown" />
+    </RelativeLayout>
+</LinearLayout>
+

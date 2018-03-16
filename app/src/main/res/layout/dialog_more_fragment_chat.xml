@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/reg_bg_bottom"
+    android:orientation="vertical"
+    android:padding="@dimen/p_more_main"
+    android:layout_marginRight="@dimen/m_dialog_lr"
+    android:layout_marginLeft="@dimen/m_dialog_lr">
+
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/dialog_more_fragment_chat_tv_clear_conversation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/p_tv"
+        android:text="@string/clear_conversation"
+        android:textSize="@dimen/text_size_xlarge"
+        wachat:customFont="@string/font" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_view"
+        android:background="@color/view_gray_color" />
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/dialog_more_fragment_chat_tv_email_conversation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/p_tv"
+        android:text="@string/email_conversation"
+        android:textSize="@dimen/text_size_xlarge"
+        wachat:customFont="@string/font" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_view"
+        android:background="@color/view_gray_color" />
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/dialog_more_fragment_chat_tv_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/p_tv"
+        android:text="@string/block"
+        android:textSize="@dimen/text_size_xlarge"
+        wachat:customFont="@string/font" />
+</LinearLayout>

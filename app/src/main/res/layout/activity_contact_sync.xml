@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="-5dp"
+        android:layout_marginTop="-5dp"
+        android:layout_marginLeft="-5dp"
+        android:layout_marginRight="-5dp"
+        android:src="@drawable/ic_registration_bg_new" />
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/activity_contact_sync_tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/activity_contact_sync_logo_center"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="WELCOME TO"
+        android:textColor="@color/offline_indicator_color"
+        android:textSize="35sp"
+        wachat:customFont="@string/font" />
+
+    <ImageView
+        android:id="@+id/activity_contact_sync_logo_center"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/logowithtext" />
+
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ProgressBarCircularIndeterminate
+        android:id="@+id/activity_contact_sync_progressBarCircularIndetermininate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/activity_contact_sync_tv_syncing_message"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/app_Brown"
+        android:visibility="visible" />
+    <ProgressBar
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:id="@+id/activity_contact_sync_progressBar_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_above="@+id/activity_contact_sync_tv_syncing_message"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"/>
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/activity_contact_sync_tv_syncing_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_contact_sync_logo_center"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="10dp"
+        android:text="Please wait while your contacts are being synced."
+        android:textColor="@color/offline_indicator_color"
+        android:textSize="@dimen/text_size_xlarge"
+        wachat:customFont="@string/font" />
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/activity_contact_sync_tv_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/continue_bg"
+        android:gravity="center"
+        android:padding="8dp"
+        android:elevation="10dp"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="@color/offline_indicator_color"
+        android:textSize="@dimen/text_size_large"
+        wachat:customFont="@string/font"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/activity_contact_sync_tv_syncing_message"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

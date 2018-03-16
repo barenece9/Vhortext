@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="5dp"
+    >
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/tvSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/ic_group_chat_screen_calender_icon"
+        android:drawablePadding="10dp"
+        android:padding="5dp"
+        android:visibility="visible"
+        android:textColor="@color/app_Brown"
+        wachat:customFont="@string/font"
+        android:textSize="@dimen/text_size_medium"
+        android:background="#d9ccb9"/>
+
+</LinearLayout>

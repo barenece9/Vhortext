@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cell_youtube_video"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/p_left">
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/tv_group_sender_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="left"
+        android:layout_marginBottom="5dp"
+        android:textSize="@dimen/text_size_small"
+        android:textColorLink="@android:color/black"
+        wachat:customFont="@string/font_bold" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_group_sender_name"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/cell_youtube_video_rl_vid_thumb"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/cell_youtube_video_iv_vid_thumb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_youtube_small_icon" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                android:id="@+id/cell_youtube_video_tv_vid_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:gravity="left"
+                android:textColor="@color/chat_text_color"
+                android:textSize="@dimen/text_size_large"
+                wachat:customFont="@string/font" />
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                android:id="@+id/cell_youtube_video_tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:gravity="left"
+                android:textColor="@color/chat_text_color"
+                android:textSize="@dimen/text_size_small"
+                wachat:customFont="@string/font" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                    android:id="@+id/cell_youtube_video_tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/chat_text_color"
+                    android:textSize="@dimen/text_size_extra_small"
+                    wachat:customFont="@string/font" />
+
+                <ImageView
+                    android:id="@+id/img_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="-3.5dp"
+                    android:contentDescription="@null"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/toolbar_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+    <!--top section-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/square_box_transparent_bg"
+        android:orientation="vertical">
+
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/square_box_gray_bg"
+            android:padding="10dp"
+            android:text="@string/your_currnt_status"
+            android:textColor="@color/header_text_color"
+            android:textSize="@dimen/text_size_large"
+            wachat:customFont="@string/font" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText
+                android:id="@+id/activity_update_status_et_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/activity_update_status_edite_status_devider"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:hint="Status"
+                android:maxLength="40"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/text_size_large"
+                wachat:customFont="@string/font_bold" />
+
+
+            <RelativeLayout
+                android:id="@+id/activity_update_status_edite_status_devider"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/activity_update_status_rel_right"
+                android:layout_alignTop="@+id/activity_update_status_rel_right"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="3dp"
+                android:layout_toLeftOf="@+id/activity_update_status_rel_right"
+                android:background="@drawable/ic_update_status_small_bar" />
+
+            <RelativeLayout
+                android:id="@+id/activity_update_status_rel_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ProgressBarCircularIndeterminate
+                    android:id="@+id/activity_update_status_progressBarCircularIndetermininate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/app_Brown"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/activity_update_status_iv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_update_status_icon"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--status list section-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/square_box_gray_bg"
+            android:padding="10dp"
+            android:text="@string/select_new_status"
+            android:textColor="@color/header_text_color"
+            android:textSize="@dimen/text_size_large"
+            wachat:customFont="@string/font" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/square_box_transparent_bg">
+
+            <ListView
+                android:id="@+id/activity_update_status_lv_status"
+                android:layout_width="match_parent"
+                android:divider="@null"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

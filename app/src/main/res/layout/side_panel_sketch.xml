@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/sketch_panel_bg"
+    android:padding="@dimen/m_common"
+    android:orientation="vertical"
+    android:rotation="-180">
+
+
+    <ImageView
+        android:id="@+id/pen"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:src="@drawable/ic_sketch_pen_button" />
+
+    <ImageView
+        android:id="@+id/brush"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_sketch_brush_button" />
+
+    <ImageView
+        android:id="@+id/eraser"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_sketch_eraser_button" />
+
+
+    <ImageView
+        android:id="@+id/size"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_sketch_round_button" />
+
+    <ImageView
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_sketch_delete_button" />
+
+    <ImageView
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_sketch_send_button" />
+
+    <ImageView
+
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_weight="1.2" />
+</LinearLayout>

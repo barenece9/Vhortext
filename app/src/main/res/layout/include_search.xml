@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/find_people_search_bar_bg"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/include_search_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/ic_find_people_search_icon" />
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText
+        android:id="@+id/include_search_et_search_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toLeftOf="@+id/include_search_iv_cross"
+        android:layout_toRightOf="@+id/include_search_iv"
+        android:background="@null"
+        android:singleLine="true"
+        android:textCursorDrawable="@null"
+        android:imeOptions="actionSearch"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_large"
+        android:hint="Enter Name or phone"
+        android:textColorHint="@color/circular_progress_default_background"
+        wachat:customFont="@string/font"/>
+
+    <ImageView
+        android:id="@+id/include_search_iv_cross"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_find_people_close_icon" />
+
+
+</RelativeLayout>

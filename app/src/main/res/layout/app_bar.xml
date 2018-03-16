@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_Brown"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    wachat:theme="@style/Vhortex.AppBar"
+    wachat:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    wachat:titleTextAppearance="@style/ToolbarTitle" >
+
+
+<include
+    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    layout="@layout/topbar_wachat"/>
+</android.support.v7.widget.Toolbar>

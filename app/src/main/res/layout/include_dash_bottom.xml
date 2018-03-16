@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/app_Brown">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="1dp">
+
+        <FrameLayout
+            android:id="@+id/include_dash_bottom_fl_Chat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#20ffffff">
+
+            <ImageView
+                android:id="@+id/include_dash_bottom_iv_Chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tab_chat_new_icon"
+                android:layout_gravity="center"
+                android:padding="5dp" />
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                android:id="@+id/include_dash_bottom_tv_Chat_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_small"
+                android:background="@drawable/ic_notificaton_red_circle"
+                android:layout_marginTop="-5dp"
+                android:layout_marginRight="3dp"
+                wachat:customFont="@string/font"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/include_dash_bottom_fl_Favorite"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/include_dash_bottom_iv_Favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/tab_my_circle_new_icon"
+                android:layout_gravity="center"/>
+            <!--<com.wachat.customViews.ChatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_small"
+                wachat:customFont="@string/font"/>-->
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/include_dash_bottom_fl_Group"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/include_dash_bottom_iv_Group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/tab_group_new_icon"
+                android:layout_gravity="center"/>
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                android:id="@+id/include_dash_bottom_tv_Group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_small"
+                android:background="@drawable/ic_notificaton_red_circle"
+                android:layout_marginTop="-5dp"
+                android:layout_marginRight="5dp"
+                wachat:customFont="@string/font"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/include_dash_bottom_fl_Profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/include_dash_bottom_iv_Profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/tab_contacts_new_icon"
+                android:layout_gravity="center"/>
+            <!--<com.wachat.customViews.ChatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_small"
+                wachat:customFont="@string/font"/>-->
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/include_dash_bottom_fl_More"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/include_dash_bottom_iv_More"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/tab_more_new_icon"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

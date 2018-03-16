@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="apps.lnsel.com.vhortexttest">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <permission
+        android:name="apps.lnsel.com.vhortexttest.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="apps.lnsel.com.vhortexttest.permission.MAPS_RECEIVE" />
+
+    <application
+        android:name="apps.lnsel.com.vhortexttest.helpers.VolleyLibrary.AppController"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/Vhortex.Theme"
+        >
+        <!--tools:replace="android:theme"-->
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.SplashScreen.SplashActivity"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="adjustNothing">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.TutorialScreen.TutorialActivity"
+            android:screenOrientation="portrait"
+            android:hardwareAccelerated="true"
+            android:theme="@style/Vhortex.Theme">
+
+        </activity>
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.SignupScreen.SignupActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.OTPVerificationScreen.OTPVerificationActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme" />
+
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.OTPConfirmationScreen.OTPConfirmationActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme" />
+
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.ContactSyncScreen.ContactSyncActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.MainActivity"
+            android:launchMode="singleTask"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.ChatScreen.ChatActivityNew"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.ProfileStatusScreen.ProfileStatusActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.EditProfileScreen.EditProfileActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.SelectLanguageScreen.SelectLanguageActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.ChatScreen.Attachment.ActivityGallery"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.ChatScreen.Attachment.ActivityShareImage"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.ChatScreen.Attachment.ActivityContactDetails"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.ChatScreen.Attachment.ActivityPinchToZoom"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.ChatScreen.Attachment.ActivityAddToContact"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.ChatScreen.Attachment.CustomAddToContactActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.helpers.cropper.CropImageActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.EditProfileScreen.editimage.EditPhotoActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.ChatScreen.Attachment.ActivitySketch"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.GroupChatScreen.GroupCreator.ActivityCreateNewGroup"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.GroupChatScreen.GroupEditImage.GroupAddPhotoActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.GroupChatScreen.GroupCreator.AddPeopleInGroupScreen.ActivityAddPeopleInGroup"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.GroupChatScreen.GroupCreator.ActivityEditNewGroup"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.GroupChatScreen.GroupEditImage.GroupEditPhotoActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.GroupChatScreen.GroupCreator.EditPeopleInGroupScreen.ActivityEditPeopleInGroup"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <receiver
+            android:name="apps.lnsel.com.vhortexttest.receivers.NetworkChangeReceiver"
+            android:label="NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.GroupChatScreen.GroupChatActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.GroupChatScreen.GroupCreator.GroupViewDetailsScreen.GroupViewDetailsActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.GroupChatScreen.GroupAttachment.ActivityGroupAddToContact"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.GroupChatScreen.GroupAttachment.ActivityGroupContactDetails"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.GroupChatScreen.GroupAttachment.ActivityGroupGallery"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.GroupChatScreen.GroupAttachment.ActivityGroupPinchToZoom"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.GroupChatScreen.GroupAttachment.ActivityGroupShareImage"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.GroupChatScreen.GroupAttachment.ActivityGroupSketch"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <!--
+     ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBmChwpz_ZM6Evmr99cAOMz0JG5jf1tz74"/>
+
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.FriendProfileScreen.FriendProfileActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.helpers.CustomViews.VideoPlayerActivity"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
+            android:hardwareAccelerated="true" />
+
+
+        <service android:name="apps.lnsel.com.vhortexttest.pushnotification.FcmService.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="apps.lnsel.com.vhortexttest.pushnotification.FcmService.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+
+        <activity android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.SettingScreen.SettingActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" ></activity>
+
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.BlockUserScreen.BlockUserActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden"/>
+
+        <activity android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.FindPeopleScreen.FindPeopleActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" ></activity>
+
+
+        <activity android:name="apps.lnsel.com.vhortexttest.views.HelpScreen.HelpActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" ></activity>
+
+        <activity android:name="apps.lnsel.com.vhortexttest.views.CopyrightScreen.CopyrightActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" ></activity>
+
+        <activity android:name="apps.lnsel.com.vhortexttest.views.ContactUsScreen.ContactUsActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" ></activity>
+
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.ContactUsScreen.editimageContactUs.ContactUsEditPhotoActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity android:name="apps.lnsel.com.vhortexttest.views.AboutScreen.AboutActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" ></activity>
+
+        <activity android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.FindPeopleScreen.searchMyVhortextContact.SearchMyVhortextContactActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" ></activity>
+
+        <activity android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.FindPeopleScreen.searchNearByUser.SearchNearByUsersActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" ></activity>
+
+        <activity android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.FindPeopleScreen.searchAroundTheGlobe.SearchAroundTheGlobeActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" ></activity>
+
+
+
+        <activity android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.InviteFriendScreen.InviteFriendActivity"
+            android:noHistory="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" ></activity>
+
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.ChatScreen.Attachment.ActivityYoutubePlayer"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.ChatScreen.Attachment.ActivityYouTubeVideoList"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.ChatScreen.Attachment.ActivityYahooNews"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.ChatScreen.Attachment.ActivityViewLocation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+
+
+
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.GroupChatScreen.GroupAttachment.ActivityGroupYoutubePlayer"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.GroupChatScreen.GroupAttachment.ActivityGroupYouTubeVideoList"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.GroupChatScreen.GroupAttachment.ActivityGroupYahooNews"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.GroupChatScreen.GroupAttachment.ActivityGroupViewLocation"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.ChatScreen.Attachment.ShareScreen.ShareMsgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name="apps.lnsel.com.vhortexttest.views.Dashboard.activities.GroupChatScreen.GroupShareScreen.GroupShareMsgActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Vhortex.Theme"
+            android:windowSoftInputMode="stateHidden" />
+
+        <service android:name="apps.lnsel.com.vhortexttest.services.LocationService"/>
+        <service android:name="apps.lnsel.com.vhortexttest.services.ContactSyncService"/>
+        <service android:name="apps.lnsel.com.vhortexttest.services.ChatDeleteService"/>
+
+    </application>
+
+</manifest>

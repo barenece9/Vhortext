@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp"
+    android:layout_marginBottom="-5dp"
+    android:layout_marginTop="-5dp"
+    android:layout_marginLeft="-5dp"
+    android:layout_marginRight="-5dp"
+    android:background="@drawable/ic_registration_bg_new">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:background="@color/offline_indicator_color">
+
+        <TextView
+            android:id="@+id/tv_skip_tutorial"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/view_yellow_color"
+            android:text="SKIP"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/offline_indicator_color"
+            android:gravity="center"
+            android:textSize="@dimen/text_size_xlarge"/>
+
+      <com.afollestad.easyvideoplayer.EasyVideoPlayer
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/tutorial_video_player"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            android:layout_above="@+id/tv_skip_tutorial" />
+
+        <!-- app:evp_autoPlay="true"-->
+        <!-- app:evp_disableControls="true"-->
+       <!-- <ListView
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tv_skip_tutorial">
+
+        </ListView>-->
+
+        <ImageButton
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@android:drawable/ic_media_play"
+            android:visibility="visible"/>
+
+        <ImageButton
+            android:id="@+id/pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@android:drawable/ic_media_pause"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+

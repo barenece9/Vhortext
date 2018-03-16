@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/reg_bg_bottom"
+    android:paddingBottom="@dimen/p_bottom_dialog_del"
+    android:layout_marginLeft="@dimen/m_dialog_lr"
+    android:layout_marginRight="@dimen/m_dialog_lr">
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/dialog_confirmation_tv_common_header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/p_dialog_del_t"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_large"
+        wachat:customFont="@string/font_bold"
+        android:text="Update Available"
+        android:gravity="center"/>
+
+    <View
+        android:id="@+id/dialog_confirmation_view_header"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@id/dialog_confirmation_tv_common_header_title"
+        android:background="@color/view_gray_color" />
+
+    <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+        android:id="@+id/dialog_confirmation_tv_common_header"
+        android:layout_below="@id/dialog_confirmation_view_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/p_dialog_del_t"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_medium"
+        wachat:customFont="@string/font_bold"
+        android:text="Do you want to update this app?"
+        android:gravity="center"/>
+
+    <View
+        android:id="@+id/dialog_confirmation_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/dialog_confirmation_tv_common_header"
+        android:layout_margin="5dp"
+        android:background="@color/view_gray_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_confirmation_view"
+
+        android:background="@color/view_gray_color">
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/dialog_confirmation_tv_dialog_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="0.10dp"
+            android:layout_weight="1"
+            android:background="@color/reg_bg_bottom"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/cancel"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_large"
+            wachat:customFont="@string/font" />
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/dialog_confirmation_tv_dialog_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0.10dp"
+            android:layout_weight="1"
+            android:background="@color/reg_bg_bottom"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/confirm"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_large"
+            wachat:customFont="@string/font" />
+    </LinearLayout>
+
+</RelativeLayout>
+
+

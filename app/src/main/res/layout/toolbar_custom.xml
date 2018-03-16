@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/app_Brown">
+
+        <ImageButton
+            android:id="@+id/toolbar_custom_ivbtn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_chat_share_header_back_icon"
+            android:background="@drawable/selectable_button_bg"
+            android:paddingLeft="8dp"/>
+
+        <ImageView
+            android:id="@+id/toolbar_custom_iv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/d_app_logo"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/toolbar_custom_ivbtn_back"
+            android:layout_toRightOf="@+id/toolbar_custom_ivbtn_back"
+            android:paddingLeft="10dp"/>
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/toolbar_custom_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/view_yellow_color"
+            android:textSize="@dimen/text_size_large"
+            wachat:customFont="@string/font_bold"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/toolbar_custom_iv_logo"
+            android:layout_toRightOf="@+id/toolbar_custom_iv_logo"
+            android:paddingLeft="5dp"
+            android:text="Name"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/toolbar_custom_lnr_group_chat_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/toolbar_custom_iv_logo"
+            android:layout_toRightOf="@+id/toolbar_custom_iv_logo"
+            android:paddingLeft="5dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                android:id="@+id/toolbar_custom_lnr_group_chat_tv_friend_or_group_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/view_yellow_color"
+                android:textSize="@dimen/text_size_large"
+                wachat:customFont="@string/font_bold"
+                android:text="Name"
+                android:ellipsize="end"
+                android:maxEms="10"
+                android:maxLines="1"/>
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                android:id="@+id/toolbar_custom_lnr_group_chat_tv_status_or_group_member_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/view_yellow_color"
+                android:textSize="@dimen/text_size_small"
+                wachat:customFont="@string/font_bold"
+                android:text="name1,name2"
+                android:ellipsize="end"
+                android:maxEms="12"
+                android:maxLines="1"/>
+
+        </LinearLayout>
+
+
+
+
+
+        <ImageButton
+            android:id="@+id/custom_dialog_iv_translator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/toolbar_custom_iv_attachment"
+            android:layout_toLeftOf="@+id/toolbar_custom_iv_attachment"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_chats_translator_icon_deselect"
+            android:background="@drawable/selectable_button_bg"
+            android:visibility="gone" />
+
+
+        <ImageButton
+            android:id="@+id/toolbar_custom_iv_attachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/toolbar_custom_iv_profile_pic"
+            android:layout_toLeftOf="@+id/toolbar_custom_iv_profile_pic"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_chat_share_header_attachment_icon"
+            android:background="@drawable/selectable_button_bg"
+            android:visibility="gone" />
+
+        <!-- <ImageView
+             android:id="@+id/toolbar_custom_iv_profile_pic"
+             android:layout_width="33dp"
+             android:layout_height="33dp"
+
+             android:layout_toStartOf="@+id/toolbar_custom_iv_new_chat_relation"
+             android:layout_toLeftOf="@+id/toolbar_custom_iv_new_chat_relation"
+             android:layout_centerInParent="true"
+             android:layout_marginLeft="5dp"
+             android:layout_marginRight="10dp"
+             android:src="@drawable/ic_chats_noimage_profile"
+             android:visibility="gone" />-->
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatRoundedView
+            android:id="@+id/toolbar_custom_iv_profile_pic"
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:layout_toStartOf="@+id/toolbar_custom_iv_new_chat_relation"
+            android:layout_toLeftOf="@+id/toolbar_custom_iv_new_chat_relation"
+            android:layout_centerInParent="true"
+
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_chats_noimage_profile"
+            android:visibility="gone"/>
+        <!--toolbar_custom_iv_new_chat_relation-->
+
+        <ImageButton
+            android:id="@+id/toolbar_custom_iv_new_chat_relation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_new_chat_screen_group_icon"
+            android:background="@drawable/selectable_button_bg"
+            android:visibility="gone" />
+
+
+        <ImageButton
+            android:id="@+id/toolbar_custom_iv_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/toolbar_custom_iv_search"
+            android:layout_toLeftOf="@+id/toolbar_custom_iv_search"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_refresh_icon"
+            android:background="@drawable/selectable_button_bg"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/toolbar_custom_iv_sketch_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_sketch_button"
+            android:background="@drawable/selectable_button_bg"
+            android:visibility="gone" />
+
+
+        <!--new item-->
+        <ImageButton
+            android:id="@+id/toolbar_custom_iv_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/toolbar_custom_iv_sketch_save"
+            android:layout_toLeftOf="@+id/toolbar_custom_iv_sketch_save"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_toolbar_gallery_icon_24dp"
+            android:background="@drawable/selectable_button_bg"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/toolbar_custom_iv_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/toolbar_custom_iv_camera"
+            android:layout_toLeftOf="@+id/toolbar_custom_iv_camera"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_toolbar_background_icon_24dp"
+            android:background="@drawable/selectable_button_bg"
+            android:visibility="gone" />
+
+
+        <ImageButton
+            android:id="@+id/toolbar_custom_iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_chats_header_search_icon"
+            android:background="@drawable/selectable_button_bg"
+            android:visibility="gone" />
+
+
+        <ImageButton
+            android:id="@+id/toolbar_custom_iv_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_new_chat_screen_filter_icon"
+            android:background="@drawable/selectable_button_bg"
+            android:visibility="gone" />
+
+
+        <ImageButton
+            android:id="@+id/toolbar_custom_iv_radius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/toolbar_custom_iv_filter"
+            android:layout_toLeftOf="@+id/toolbar_custom_iv_filter"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/ic_send_current_location_header_radius_icon"
+            android:background="@drawable/selectable_button_bg"
+            android:visibility="gone" />
+
+
+
+
+        <LinearLayout
+            android:id="@+id/toolbar_custom_lnr_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:visibility="gone">
+
+            <View
+                android:id="@+id/toolbar_custom_lnr_right_view_vertical_bar"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/view_yellow_color" />
+
+            <ImageButton
+                android:id="@+id/toolbar_custom_lnr_right_iv_tick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_header_done_icon"
+                android:background="@drawable/selectable_button_bg"/>
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                android:id="@+id/toolbar_custom_lnr_right_tv_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="Next"
+                android:textSize="@dimen/text_size_large"
+                android:textColor="@color/view_yellow_color"
+                wachat:customFont="@string/font" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

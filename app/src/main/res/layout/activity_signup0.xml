@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_registration_bg"
+    android:orientation="vertical">
+
+    <!-- top section -->
+
+    <ImageView
+        android:id="@+id/activity_registration_iv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:adjustViewBounds="true"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/lnr_Bottom"
+        android:src="@drawable/ic_registration_vortext_text"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/activity_registration_iv_Logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/activity_registration_iv_text"
+        android:src="@drawable/ic_registration_vortext_logo"
+        android:visibility="visible" />
+    <!-- bottom section -->
+
+    <LinearLayout
+        android:id="@+id/lnr_Bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:visibility="visible">
+
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText
+            android:id="@+id/activity_registration_registration_et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/transluscent_app_Brown"
+            android:cursorVisible="true"
+            android:gravity="center"
+            android:hint="Type your name"
+            android:imeOptions="actionNext"
+            android:maxLength="25"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:singleLine="true"
+            android:textColor="#f7d19e"
+            android:textColorHint="#f7d19e"
+            android:textCursorDrawable="@null"
+            android:textSize="16sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:showDividers="middle"
+            android:dividerPadding="4dp"
+            android:divider="@drawable/ll_divider_app_brown"
+            android:background="@drawable/border_all_side_registration"
+            android:orientation="horizontal">
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText
+                android:id="@+id/activity_registration_et_country_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="6dp"
+                android:background="@android:color/transparent"
+                android:layout_marginRight="6dp"
+                android:gravity="center"
+                android:minWidth="50dp"
+                android:imeOptions="actionNext"
+                android:paddingBottom="10dp"
+                android:paddingEnd="4dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="4dp"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:text="+1"
+                android:inputType="number"
+                android:textColor="#140800"
+                android:textCursorDrawable="@null"
+                android:textSize="16sp" />
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText
+                android:id="@+id/activity_registration_et_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:digits="0123456789"
+                android:gravity="left"
+                android:hint="@string/et_hint_phone_number"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="17"
+                android:paddingBottom="10dp"
+                android:paddingEnd="4dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="4dp"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:textColor="#140800"
+                android:textCursorDrawable="@null"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:orientation="vertical">
+
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+
+                android:text="@string/tap_agree_and_continue_to_accept"
+                android:textColor="#f7d19e"
+                android:textSize="13sp" />
+
+
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                android:id="@+id/activity_registration_tv_terms_policy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="@string/term_of_use_and_privacy_policy"
+                android:textColor="#f7d19e"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+            android:id="@+id/activity_registration_tv_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+
+            android:background="#f79521"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/m_reg_common_top"
+            android:text="Agree and Continue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            wachat:customFont="@string/font" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ProgressBarCircularIndeterminate
+            android:id="@+id/activity_registration_progressBarCircular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/app_Brown"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent" />
+
+</RelativeLayout>

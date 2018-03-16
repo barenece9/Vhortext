@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wachat="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="-5dp"
+    android:layout_marginTop="-5dp"
+    android:layout_marginLeft="-5dp"
+    android:layout_marginRight="-5dp"
+    android:background="@drawable/ic_registration_bg_new"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:background="@drawable/transparent_signup_grey_outline">
+
+        <!-- top section -->
+
+        <RelativeLayout
+            android:id="@+id/ll_top_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lnr_center"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp">
+
+            <ImageView
+                android:id="@+id/activity_registration_iv_Logo"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:adjustViewBounds="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/logowithtext"
+                android:layout_alignParentTop="true"
+                android:visibility="visible" />
+
+            <!--<ImageView-->
+            <!--android:id="@+id/activity_registration_iv_text"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/activity_registration_iv_Logo"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:src="@drawable/ic_registration_vortext_text"-->
+            <!--android:visibility="visible" />-->
+
+        </RelativeLayout>
+
+
+
+        <!-- Middle section -->
+        <LinearLayout
+            android:id="@+id/lnr_center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="visible">
+
+
+            <!--Name-->
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText
+                android:id="@+id/activity_registration_registration_et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/border_signup_edittext"
+                android:cursorVisible="true"
+                android:gravity="center"
+                android:hint="Enter your name"
+                android:imeOptions="actionNext"
+                android:maxLength="25"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:singleLine="true"
+                android:textColor="@color/offline_indicator_color"
+                android:textColorHint="@color/offline_indicator_color"
+                android:textCursorDrawable="@null"
+                android:drawableLeft="@drawable/ic_person_outline_white_24dp"
+                android:textSize="16sp" />
+
+            <!--Mobile No-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:showDividers="middle"
+                android:dividerPadding="4dp"
+                android:divider="@drawable/ll_divider_view_yellow"
+                android:background="@drawable/border_signup_edittext"
+                android:orientation="horizontal">
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText
+                    android:id="@+id/activity_registration_et_country_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginEnd="6dp"
+                    android:background="@android:color/transparent"
+                    android:layout_marginRight="6dp"
+                    android:gravity="center"
+                    android:minWidth="50dp"
+                    android:imeOptions="actionNext"
+                    android:paddingBottom="8dp"
+                    android:paddingEnd="4dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="4dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="8dp"
+                    android:singleLine="true"
+                    android:text="+91"
+                    android:inputType="number"
+                    android:textColor="@color/offline_indicator_color"
+                    android:textCursorDrawable="@null"
+                    android:textSize="16sp"
+                    android:visibility="gone"/>
+
+                <com.rilixtech.CountryCodePicker
+                    android:id="@+id/ccp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:paddingEnd="2dp"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="2dp"
+                    android:paddingStart="6dp"
+                    android:paddingTop="8dp"
+                    wachat:ccp_textColor="#ffffff"
+                    wachat:ccp_hideNameCode="true"
+                    wachat:ccp_textSize="16sp"
+                    wachat:ccp_countryPreference="US"
+                    wachat:ccp_defaultNameCode="US"/>
+
+
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText
+                    android:id="@+id/activity_registration_et_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:digits="0123456789"
+                    android:gravity="center"
+                    android:hint="@string/et_hint_phone_number"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="17"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/offline_indicator_color"
+                    android:textColorHint="@color/offline_indicator_color"
+                    android:textCursorDrawable="@null"
+                    android:drawableLeft="@drawable/ic_screen_lock_portrait_white_24dp"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!--Bottom Section-->
+        <LinearLayout
+            android:id="@+id/lnr_Bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:layout_below="@+id/lnr_center">
+
+            <!--Text Agree & Continue-->
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="@string/tap_agree_and_continue_to_accept"
+                android:textColor="#fff"
+                android:textSize="13sp" />
+
+            <!--Button Agree & Continue-->
+            <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                android:id="@+id/activity_registration_tv_continue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/continue_bg"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/m_reg_common_top"
+                android:text="Agree and Continue"
+                android:textSize="13sp"
+                android:textColor="#fff"
+                android:elevation="10dp"
+                wachat:customFont="@string/font" />
+
+            <!--Text Tesrms of use-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginBottom="20dp">
+
+
+                <apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView
+                    android:id="@+id/activity_registration_tv_terms_policy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/term_of_use_and_privacy_policy"
+                    android:textColor="#fff"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <apps.lnsel.com.vhortexttest.helpers.CustomViews.ProgressBarCircularIndeterminate
+            android:id="@+id/activity_registration_progressBarCircular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/app_Brown"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent" />
+
+</RelativeLayout>
+
+
+
+
+
+
+
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:wachat="http://schemas.android.com/apk/res-auto"-->
+    <!--android:id="@+id/main_container"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@drawable/ic_registration_bg_new"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_margin="20dp"-->
+    <!--android:background="@drawable/transparent_signup_grey_outline">-->
+
+    <!--&lt;!&ndash; top section &ndash;&gt;-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/ll_top_logo"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_above="@+id/lnr_Bottom"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/activity_registration_iv_Logo"-->
+    <!--android:layout_width="160dp"-->
+    <!--android:layout_height="160dp"-->
+    <!--android:adjustViewBounds="true"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:src="@drawable/ic_registration_vortext_logo"-->
+    <!--android:visibility="visible" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/activity_registration_iv_text"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:src="@drawable/ic_registration_vortext_text"-->
+    <!--android:visibility="visible" />-->
+
+
+
+    <!--</LinearLayout>-->
+
+
+
+    <!--&lt;!&ndash; bottom section &ndash;&gt;-->
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/lnr_Bottom"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginEnd="@dimen/activity_horizontal_margin"-->
+    <!--android:layout_marginLeft="@dimen/activity_horizontal_margin"-->
+    <!--android:layout_marginRight="@dimen/activity_horizontal_margin"-->
+    <!--android:layout_marginStart="@dimen/activity_horizontal_margin"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:orientation="vertical"-->
+    <!--android:padding="12dp"-->
+    <!--android:visibility="visible">-->
+
+
+    <!--<apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText-->
+    <!--android:id="@+id/activity_registration_registration_et_name"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:background="@drawable/border_signup_edittext"-->
+    <!--android:cursorVisible="true"-->
+    <!--android:gravity="center"-->
+    <!--android:hint="Enter your name"-->
+    <!--android:imeOptions="actionNext"-->
+    <!--android:maxLength="25"-->
+    <!--android:paddingBottom="10dp"-->
+    <!--android:paddingTop="10dp"-->
+    <!--android:paddingLeft="30dp"-->
+    <!--android:paddingRight="30dp"-->
+    <!--android:singleLine="true"-->
+    <!--android:textColor="@color/offline_indicator_color"-->
+    <!--android:textColorHint="@color/offline_indicator_color"-->
+    <!--android:textCursorDrawable="@null"-->
+    <!--android:drawableLeft="@drawable/ic_person_outline_white_24dp"-->
+    <!--android:textSize="16sp" />-->
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="16dp"-->
+    <!--android:showDividers="middle"-->
+    <!--android:dividerPadding="4dp"-->
+    <!--android:divider="@drawable/ll_divider_view_yellow"-->
+    <!--android:background="@drawable/border_signup_edittext"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText-->
+    <!--android:id="@+id/activity_registration_et_country_code"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginEnd="6dp"-->
+    <!--android:background="@android:color/transparent"-->
+    <!--android:layout_marginRight="6dp"-->
+    <!--android:gravity="center"-->
+    <!--android:minWidth="50dp"-->
+    <!--android:imeOptions="actionNext"-->
+    <!--android:paddingBottom="10dp"-->
+    <!--android:paddingEnd="4dp"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="4dp"-->
+    <!--android:paddingStart="10dp"-->
+    <!--android:paddingTop="10dp"-->
+    <!--android:singleLine="true"-->
+    <!--android:text="+1"-->
+    <!--android:inputType="number"-->
+    <!--android:textColor="@color/offline_indicator_color"-->
+    <!--android:textCursorDrawable="@null"-->
+    <!--android:textSize="16sp" />-->
+
+    <!--<apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatEditText-->
+    <!--android:id="@+id/activity_registration_et_number"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@android:color/transparent"-->
+    <!--android:digits="0123456789"-->
+    <!--android:gravity="center"-->
+    <!--android:hint="@string/et_hint_phone_number"-->
+    <!--android:imeOptions="actionDone"-->
+    <!--android:inputType="number"-->
+    <!--android:maxLength="17"-->
+    <!--android:paddingBottom="10dp"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="4dp"-->
+    <!--android:paddingTop="10dp"-->
+    <!--android:singleLine="true"-->
+    <!--android:textColor="@color/offline_indicator_color"-->
+    <!--android:textColorHint="@color/offline_indicator_color"-->
+    <!--android:textCursorDrawable="@null"-->
+    <!--android:drawableLeft="@drawable/ic_screen_lock_portrait_white_24dp"-->
+    <!--android:textSize="16sp" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--<apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="16dp"-->
+    <!--android:gravity="center"-->
+
+    <!--android:text="@string/tap_agree_and_continue_to_accept"-->
+    <!--android:textColor="#fff"-->
+    <!--android:textSize="13sp" />-->
+
+    <!--<apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView-->
+    <!--android:id="@+id/activity_registration_tv_continue"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="16dp"-->
+    <!--android:background="#404040"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:padding="@dimen/m_reg_common_top"-->
+    <!--android:text="Agree and Continue"-->
+    <!--android:textSize="13sp"-->
+    <!--android:textColor="#fff"-->
+    <!--android:elevation="10dp"-->
+    <!--wachat:customFont="@string/font" />-->
+
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/activity_registration_rl_continue"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="20dp">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/circle_signup"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="100dp"-->
+    <!--android:src="@drawable/ic_lens_orange_24dp"/>-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:src="@drawable/arrow_signup_next"-->
+    <!--android:layout_alignTop="@id/circle_signup"-->
+    <!--android:layout_alignBottom="@id/circle_signup"-->
+    <!--android:layout_alignLeft="@id/circle_signup"-->
+    <!--android:layout_alignRight="@id/circle_signup"-->
+    <!--android:scaleType="centerInside"/>-->
+
+    <!--<ProgressBar-->
+    <!--android:indeterminate="true"-->
+    <!--android:id="@+id/activity_registration_progressBarCircular"-->
+    <!--android:visibility="visible"-->
+    <!--style="?android:attr/progressBarStyle"-->
+    <!--android:indeterminateDrawable="@drawable/custom_circular_progress_bar"-->
+    <!--android:layout_height="100dp"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_centerHorizontal="true"/>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_marginBottom="20dp">-->
+
+
+    <!--<apps.lnsel.com.vhortexttest.helpers.CustomViews.ChatTextView-->
+    <!--android:id="@+id/activity_registration_tv_terms_policy"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:gravity="center"-->
+    <!--android:text="@string/term_of_use_and_privacy_policy"-->
+    <!--android:textColor="#fff"-->
+    <!--android:textSize="13sp"-->
+    <!--android:textStyle="bold" />-->
+    <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<View-->
+    <!--android:id="@+id/view"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@android:color/transparent" />-->
+
+    <!--</RelativeLayout>-->

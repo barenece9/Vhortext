@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu_tooltip_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/menu_tooltip_ll_wrap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:padding="3dp"
+        android:background="@drawable/tooltip_bg_white"
+        android:divider="@drawable/ll_divider"
+        android:dividerPadding="2dp"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/menu_tooltip_copy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:background="@drawable/dual_state_bg">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/copy"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/menu_tooltip_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:background="@drawable/dual_state_bg">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/delete_chat_button"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/menu_tooltip_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:background="@drawable/dual_state_bg">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@drawable/ic_close_black_24dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/menu_tooltip_forward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:background="@drawable/dual_state_bg">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@drawable/user"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/menu_tooltip_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:background="@drawable/dual_state_bg">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@drawable/forward_arrow2"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>
